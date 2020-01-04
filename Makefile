@@ -141,10 +141,11 @@ define __install_homebrew_script
     curl -fsSL $$tarball | tar xz --strip 1 -C '$(homebrew_dir)'
   fi
 endef
+export __install_homebrew_script
 
 .PHONY: install-homebrew
 install-homebrew: ## install Homebrew
-	$(call __install_homebrew_script)
+	$(SHELL) -c "$$__install_homebrew_script"
 	brew update
 
 .PHONY: set-defaults
