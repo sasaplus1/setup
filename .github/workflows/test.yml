@@ -1,0 +1,19 @@
+name: test
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  on-macos:
+    name: macOS
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make setup
+  on-ubuntu:
+    name: Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make setup
