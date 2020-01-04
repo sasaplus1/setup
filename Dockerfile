@@ -1,9 +1,7 @@
 FROM ubuntu:latest
 
-RUN apt update --yes && apt install --yes bash build-essential
+RUN apt update --yes && apt install --yes bash build-essential curl
 
-WORKDIR /root
-
-RUN make setup
+WORKDIR /mnt
 
 CMD ["bash"]
