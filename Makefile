@@ -7,11 +7,16 @@ makefile_dir := $(dir $(makefile))
 
 os := $(subst darwin,macos,$(shell uname -s | tr 'A-Z' 'a-z'))
 
+# for macOS
+# update by install-homebrew-linux target if Linux
 homebrew_dir := $(HOME)/Homebrew
 homebrew_bin := $(homebrew_dir)/bin/brew
 
 .PHONY: add-homebrew-taps
 add-homebrew-taps: add-homebrew-taps-$(os) ## add brew taps
+
+.PHONY: add-homebrew-taps-linux
+add-homebrew-taps-linux: ## add brew taps for Linux
 
 .PHONY: add-homebrew-taps-macos
 add-homebrew-taps-macos: ## add brew taps for macOS
@@ -19,9 +24,6 @@ add-homebrew-taps-macos: ## add brew taps for macOS
 	$(homebrew_bin) tap homebrew/cask-fonts
 	$(homebrew_bin) tap homebrew/cask-versions
 	$(homebrew_bin) tap universal-ctags/universal-ctags
-
-.PHONY: add-homebrew-taps-linux
-add-homebrew-taps-linux: ## add brew taps for Linux
 
 .PHONY: all
 all: ## output targets
@@ -108,46 +110,28 @@ install-brews-macos: ## install brews for macOS
 	#$(homebrew_bin) install reattach-to-user-namespace
 	#$(homebrew_bin) install unar
 
-# apt-install:
-#   - { name: 'build-essential'   }
-#   - { name: 'curl'              }
-#   - { name: 'git'               }
-#   - { name: 'python-setuptools' }
-#   - { name: 'ruby'              }
-
 .PHONY: install-fonts
 install-fonts: ## install fonts
 	-$(homebrew_bin) cask install font-inconsolata
 	-$(homebrew_bin) cask install font-migmix-1p
 
-define __install_homebrew_script
-  case '$(os)' in
-    macos)
-      tarball=https://github.com/Homebrew/homebrew/tarball/master
-      ;;
-    linux)
-      tarball=https://github.com/Linuxbrew/brew/tarball/master
-      ;;
-    *)
-      printf -- '%s\n' 'do not support this platform.' 1>&2
-      exit 1
-      ;;
-  esac
-
-  if [ -e '$(homebrew_dir)/bin/brew' ]
-  then
-    printf -- '%s\n' 'Homebrew is already installed.'
-  else
-    mkdir -p '$(homebrew_dir)'
-    curl -fsSL $$tarball | tar xz --strip 1 -C '$(homebrew_dir)'
-  fi
-endef
-export __install_homebrew_script
-
 .PHONY: install-homebrew
-install-homebrew: ## install Homebrew
-	$(SHELL) -c "$$__install_homebrew_script"
+install-homebrew: install-homebrew-$(os) ## install Homebrew
 	$(homebrew_bin) update
+
+.PHONY: install-homebrew-linux
+install-homebrew-linux: dir1 := /home/linuxbrew/.linuxbrew
+install-homebrew-linux: dir2 := $(HOME)/.linuxbrew
+install-homebrew-linux: ## install Homebrew for Linux
+	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+	$(eval homebrew_dir := $(shell test -d '$(dir1)' && printf '$(dir1)' || printf '$(homebrew_dir)'))
+	$(eval homebrew_dir := $(shell test -d '$(dir2)' && printf '$(dir2)' || printf '$(homebrew_dir)'))
+	$(eval homebrew_bin := $(homebrew_dir)/bin/brew)
+
+.PHONY: install-homebrew-macos
+install-homebrew-macos: ## install Homebrew for macOS
+	mkdir -p '$(homebrew_dir)'
+	curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C '$(homebrew_dir)'
 
 .PHONY: set-defaults
 set-defaults: ## set defaults for macOS
