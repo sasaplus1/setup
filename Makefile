@@ -157,7 +157,9 @@ set-defaults: ## set defaults for macOS
 setup: setup-$(os) ## setup
 
 .PHONY: setup-linux
-setup-linux: add-homebrew-taps install-homebrew clone-urxvt-extension ## setup Linux
+setup-linux: install-homebrew add-homebrew-taps install-fonts install-brews
+setup-linux: clone-urxvt-extension ## setup Linux
 
 .PHONY: setup-macos
-setup-macos: add-homebrew-taps install-homebrew set-defaults ## setup macOS
+setup-macos: install-homebrew add-homebrew-taps install-fonts install-brews
+setup-macos: fetch-brew-casks set-defaults ## setup macOS
