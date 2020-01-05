@@ -1,8 +1,11 @@
 name: test
 
 on:
-  - push
-  - pull_request
+  push:
+  pull_request:
+  schedule:
+    # NOTE: at AM8:05 everyday by JST
+    - cron: '5 23 * * *'
 
 jobs:
   on-macos:
