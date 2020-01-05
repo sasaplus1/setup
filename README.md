@@ -4,6 +4,21 @@
 
 setup scripts for my environment
 
+## How to setup
+
+execute command the below if Ubuntu:
+
+```console
+$ sudo apt update --yes
+$ sudo apt install --yes build-essential curl file git
+```
+
+setup my environment:
+
+```console
+$ make setup
+```
+
 ## License
 
 The MIT license.
