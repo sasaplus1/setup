@@ -30,6 +30,34 @@ all: ## output targets
 clone-urxvt-extension: ## get urxvt extension
 	git clone https://github.com/muennich/urxvt-perls.git $$HOME/.urxvt/urxvt-perls
 
+.PHONY: fetch-brew-casks
+fetch-brew-casks: ## install brew casks
+	#brew cask fetch alacritty
+	-brew cask fetch alfred
+	#brew cask fetch chromium
+	-brew cask fetch docker
+	#brew cask fetch dropbox
+	-brew cask fetch firefox --language=ja
+	-brew cask fetch firefox-developer-edition --language=ja
+	-brew cask fetch google-chrome
+	-brew cask fetch google-chrome-canary
+	#brew cask fetch gyazo
+	#brew cask fetch hyper
+	#brew cask fetch insomnia
+	#brew cask fetch iterm2
+	-brew cask fetch kap
+	-brew cask fetch macvim-kaoriya
+	-brew cask fetch ngrok
+	-brew cask fetch safari-technology-preview
+	#brew cask fetch send-to-kindle
+	#brew cask fetch simple-comic
+	-brew cask fetch slate
+	-brew cask fetch softu2f
+	#brew cask fetch terminus
+	#brew cask fetch vagrant
+	-brew cask fetch virtualbox
+	-brew cask fetch visual-studio-code
+
 .PHONY: install-brews
 install-brews: install-brews-$(os) ## install brews
 	-brew install bash-completion
@@ -85,34 +113,6 @@ install-brews-macos: ## install brews for macOS
 #   - { name: 'git'               }
 #   - { name: 'python-setuptools' }
 #   - { name: 'ruby'              }
-
-.PHONY: fetch-brew-casks
-fetch-brew-casks: ## install brew casks
-	#brew cask fetch alacritty
-	-brew cask fetch alfred
-	#brew cask fetch chromium
-	-brew cask fetch docker
-	#brew cask fetch dropbox
-	-brew cask fetch firefox --language=ja
-	-brew cask fetch firefox-developer-edition --language=ja
-	-brew cask fetch google-chrome
-	-brew cask fetch google-chrome-canary
-	#brew cask fetch gyazo
-	#brew cask fetch hyper
-	#brew cask fetch insomnia
-	#brew cask fetch iterm2
-	-brew cask fetch kap
-	-brew cask fetch macvim-kaoriya
-	-brew cask fetch ngrok
-	-brew cask fetch safari-technology-preview
-	#brew cask fetch send-to-kindle
-	#brew cask fetch simple-comic
-	-brew cask fetch slate
-	-brew cask fetch softu2f
-	#brew cask fetch terminus
-	#brew cask fetch vagrant
-	-brew cask fetch virtualbox
-	-brew cask fetch visual-studio-code
 
 .PHONY: install-fonts
 install-fonts: ## install fonts
