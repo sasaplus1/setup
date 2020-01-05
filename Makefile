@@ -8,16 +8,17 @@ makefile_dir := $(dir $(makefile))
 os := $(subst darwin,macos,$(shell uname -s | tr 'A-Z' 'a-z'))
 
 homebrew_dir := $(HOME)/Homebrew
+homebrew_bin := $(homebrew_dir)/bin/brew
 
 .PHONY: add-homebrew-taps
 add-homebrew-taps: add-homebrew-taps-$(os) ## add brew taps
 
 .PHONY: add-homebrew-taps-macos
 add-homebrew-taps-macos: ## add brew taps for macOS
-	brew tap delphinus/macvim-kaoriya
-	brew tap homebrew/cask-fonts
-	brew tap homebrew/cask-versions
-	brew tap universal-ctags/universal-ctags
+	$(homebrew_bin) tap delphinus/macvim-kaoriya
+	$(homebrew_bin) tap homebrew/cask-fonts
+	$(homebrew_bin) tap homebrew/cask-versions
+	$(homebrew_bin) tap universal-ctags/universal-ctags
 
 .PHONY: add-homebrew-taps-linux
 add-homebrew-taps-linux: ## add brew taps for Linux
@@ -32,80 +33,80 @@ clone-urxvt-extension: ## get urxvt extension
 
 .PHONY: fetch-brew-casks
 fetch-brew-casks: ## install brew casks
-	#brew cask fetch alacritty
-	-brew cask fetch alfred
-	#brew cask fetch chromium
-	-brew cask fetch docker
-	#brew cask fetch dropbox
-	-brew cask fetch firefox --language=ja
-	-brew cask fetch firefox-developer-edition --language=ja
-	-brew cask fetch google-chrome
-	-brew cask fetch google-chrome-canary
-	#brew cask fetch gyazo
-	#brew cask fetch hyper
-	#brew cask fetch insomnia
-	#brew cask fetch iterm2
-	-brew cask fetch kap
-	-brew cask fetch macvim-kaoriya
-	-brew cask fetch ngrok
-	-brew cask fetch safari-technology-preview
-	#brew cask fetch send-to-kindle
-	#brew cask fetch simple-comic
-	-brew cask fetch slate
-	-brew cask fetch softu2f
-	#brew cask fetch terminus
-	#brew cask fetch vagrant
-	-brew cask fetch virtualbox
-	-brew cask fetch visual-studio-code
+	#$(homebrew_bin) cask fetch alacritty
+	-$(homebrew_bin) cask fetch alfred
+	#$(homebrew_bin) cask fetch chromium
+	-$(homebrew_bin) cask fetch docker
+	#$(homebrew_bin) cask fetch dropbox
+	-$(homebrew_bin) cask fetch firefox --language=ja
+	-$(homebrew_bin) cask fetch firefox-developer-edition --language=ja
+	-$(homebrew_bin) cask fetch google-chrome
+	-$(homebrew_bin) cask fetch google-chrome-canary
+	#$(homebrew_bin) cask fetch gyazo
+	#$(homebrew_bin) cask fetch hyper
+	#$(homebrew_bin) cask fetch insomnia
+	#$(homebrew_bin) cask fetch iterm2
+	-$(homebrew_bin) cask fetch kap
+	-$(homebrew_bin) cask fetch macvim-kaoriya
+	-$(homebrew_bin) cask fetch ngrok
+	-$(homebrew_bin) cask fetch safari-technology-preview
+	#$(homebrew_bin) cask fetch send-to-kindle
+	#$(homebrew_bin) cask fetch simple-comic
+	-$(homebrew_bin) cask fetch slate
+	-$(homebrew_bin) cask fetch softu2f
+	#$(homebrew_bin) cask fetch terminus
+	#$(homebrew_bin) cask fetch vagrant
+	-$(homebrew_bin) cask fetch virtualbox
+	-$(homebrew_bin) cask fetch visual-studio-code
 
 .PHONY: install-brews
 install-brews: install-brews-$(os) ## install brews
-	-brew install bash-completion
-	#brew install ctags
-	#brew install docker
-	-brew install fd
-	-brew install fzf
-	-brew install ghq
-	-brew install gibo
-	-brew install git
-	-brew install go
-	-brew install hub
-	-brew install jq
-	#brew install mercurial
-	#brew install mitmproxy
-	-brew install monochromegane/pt/pt
-	#brew install neovim
-	-brew install denji/nginx/nginx-full --with-subs-filter-module
-	#brew install nodebrew
-	-brew install peco
-	-brew install pyenv
-	-brew install ranger
-	-brew install rbenv
-	-brew install rbenv-default-gems
-	#brew install redis
-	-brew install ripgrep
-	-brew install ruby-build
-	#brew install sqlite
-	#brew install textql
-	#brew install the_silver_searcher
-	-brew install tig
-	-brew install tmux
-	-brew install tree
-	-brew install universal-ctags
-	#brew install vcprompt
-	-brew install z
+	-$(homebrew_bin) install bash-completion
+	#$(homebrew_bin) install ctags
+	#$(homebrew_bin) install docker
+	-$(homebrew_bin) install fd
+	-$(homebrew_bin) install fzf
+	-$(homebrew_bin) install ghq
+	-$(homebrew_bin) install gibo
+	-$(homebrew_bin) install git
+	-$(homebrew_bin) install go
+	-$(homebrew_bin) install hub
+	-$(homebrew_bin) install jq
+	#$(homebrew_bin) install mercurial
+	#$(homebrew_bin) install mitmproxy
+	-$(homebrew_bin) install monochromegane/pt/pt
+	#$(homebrew_bin) install neovim
+	-$(homebrew_bin) install denji/nginx/nginx-full --with-subs-filter-module
+	#$(homebrew_bin) install nodebrew
+	-$(homebrew_bin) install peco
+	-$(homebrew_bin) install pyenv
+	-$(homebrew_bin) install ranger
+	-$(homebrew_bin) install rbenv
+	-$(homebrew_bin) install rbenv-default-gems
+	#$(homebrew_bin) install redis
+	-$(homebrew_bin) install ripgrep
+	-$(homebrew_bin) install ruby-build
+	#$(homebrew_bin) install sqlite
+	#$(homebrew_bin) install textql
+	#$(homebrew_bin) install the_silver_searcher
+	-$(homebrew_bin) install tig
+	-$(homebrew_bin) install tmux
+	-$(homebrew_bin) install tree
+	-$(homebrew_bin) install universal-ctags
+	#$(homebrew_bin) install vcprompt
+	-$(homebrew_bin) install z
 
 .PHONY: install-brews-linux
 install-brews-linux: ## install brews for Linux
-	-brew install pkg-config
+	-$(homebrew_bin) install pkg-config
 
 .PHONY: install-brews-macos
 install-brews-macos: ## install brews for macOS
-	#brew install android-platform-tools
-	#brew install fswatch
-	-brew install mas
-	#brew install reattach-to-user-namespace
-	#brew install unar
+	#$(homebrew_bin) install android-platform-tools
+	#$(homebrew_bin) install fswatch
+	-$(homebrew_bin) install mas
+	#$(homebrew_bin) install reattach-to-user-namespace
+	#$(homebrew_bin) install unar
 
 # apt-install:
 #   - { name: 'build-essential'   }
@@ -116,8 +117,8 @@ install-brews-macos: ## install brews for macOS
 
 .PHONY: install-fonts
 install-fonts: ## install fonts
-	-brew cask install font-inconsolata
-	-brew cask install font-migmix-1p
+	-$(homebrew_bin) cask install font-inconsolata
+	-$(homebrew_bin) cask install font-migmix-1p
 
 define __install_homebrew_script
   case '$(os)' in
@@ -146,7 +147,7 @@ export __install_homebrew_script
 .PHONY: install-homebrew
 install-homebrew: ## install Homebrew
 	$(SHELL) -c "$$__install_homebrew_script"
-	brew update
+	$(homebrew_bin) update
 
 .PHONY: set-defaults
 set-defaults: ## set defaults for macOS
