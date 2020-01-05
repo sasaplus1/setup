@@ -8,9 +8,15 @@ makefile_dir := $(dir $(makefile))
 os := $(subst darwin,macos,$(shell uname -s | tr 'A-Z' 'a-z'))
 
 # for macOS
-# update by install-homebrew-linux target if Linux
-homebrew_dir := $(HOME)/Homebrew
+ifeq ($(os),macos)
+  homebrew_dir := $(HOME)/Homebrew
+else
+  homebrew_dir := $(HOME)/.linuxbrew/Homebrew
+endif
+
 homebrew_bin := $(homebrew_dir)/bin/brew
+
+export HOMEBREW_CACHE := $(homebrew_dir)/cache
 
 .PHONY: add-homebrew-taps
 add-homebrew-taps: add-homebrew-taps-$(os) ## add brew taps
@@ -100,7 +106,6 @@ install-brews: install-brews-$(os) ## install brews
 
 .PHONY: install-brews-linux
 install-brews-linux: ## install brews for Linux
-	-$(homebrew_bin) install pkg-config
 
 .PHONY: install-brews-macos
 install-brews-macos: ## install brews for macOS
@@ -120,13 +125,10 @@ install-homebrew: install-homebrew-$(os) ## install Homebrew
 	$(homebrew_bin) update
 
 .PHONY: install-homebrew-linux
-install-homebrew-linux: dir1 := /home/linuxbrew/.linuxbrew
-install-homebrew-linux: dir2 := $(HOME)/.linuxbrew
 install-homebrew-linux: ## install Homebrew for Linux
-	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-	$(eval homebrew_dir := $(shell test -d '$(dir1)' && printf '$(dir1)' || printf '$(homebrew_dir)'))
-	$(eval homebrew_dir := $(shell test -d '$(dir2)' && printf '$(dir2)' || printf '$(homebrew_dir)'))
-	$(eval homebrew_bin := $(homebrew_dir)/bin/brew)
+	git clone --depth=1 https://github.com/Homebrew/brew '$(homebrew_dir)'
+	mkdir '$(HOME)/.linuxbrew/bin'
+	ln -s '$(homebrew_dir)/bin/brew' '$(HOME)/.linuxbrew/bin'
 
 .PHONY: install-homebrew-macos
 install-homebrew-macos: ## install Homebrew for macOS
