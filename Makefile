@@ -79,6 +79,7 @@ install-brews: install-brews-$(os) ## install brews
 	-$(homebrew_bin) install git
 	-$(homebrew_bin) install go
 	-$(homebrew_bin) install hub
+	-$(homebrew_bin) install itchyny/tap/mmv
 	-$(homebrew_bin) install jq
 	#$(homebrew_bin) install mercurial
 	#$(homebrew_bin) install mitmproxy
