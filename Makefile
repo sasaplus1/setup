@@ -26,10 +26,8 @@ add-homebrew-taps-linux: ## add brew taps for Linux
 
 .PHONY: add-homebrew-taps-macos
 add-homebrew-taps-macos: ## add brew taps for macOS
-	$(homebrew_bin) tap delphinus/macvim-kaoriya
 	$(homebrew_bin) tap homebrew/cask-fonts
 	$(homebrew_bin) tap homebrew/cask-versions
-	$(homebrew_bin) tap universal-ctags/universal-ctags
 
 .PHONY: all
 all: ## output targets
@@ -55,7 +53,7 @@ fetch-brew-casks: ## install brew casks
 	#$(homebrew_bin) cask fetch insomnia
 	#$(homebrew_bin) cask fetch iterm2
 	-$(homebrew_bin) cask fetch kap
-	-$(homebrew_bin) cask fetch macvim-kaoriya
+	-$(homebrew_bin) cask fetch delphinus/macvim-kaoriya/macvim-kaoriya
 	-$(homebrew_bin) cask fetch ngrok
 	-$(homebrew_bin) cask fetch safari-technology-preview
 	#$(homebrew_bin) cask fetch send-to-kindle
@@ -101,7 +99,7 @@ install-brews: install-brews-$(os) ## install brews
 	-$(homebrew_bin) install tig
 	-$(homebrew_bin) install tmux
 	-$(homebrew_bin) install tree
-	-$(homebrew_bin) install universal-ctags
+	-$(homebrew_bin) install universal-ctags/universal-ctags/universal-ctags
 	#$(homebrew_bin) install vcprompt
 	-$(homebrew_bin) install z
 
