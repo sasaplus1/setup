@@ -70,6 +70,7 @@ install-brews: install-brews-$(os) ## install brews
 	-$(homebrew_bin) install bash-completion
 	-$(homebrew_bin) install bat
 	#$(homebrew_bin) install ctags
+	-$(homebrew_bin) install denji/nginx/nginx-full --with-subs-filter-module
 	#$(homebrew_bin) install docker
 	-$(homebrew_bin) install fd
 	-$(homebrew_bin) install fzf
@@ -83,7 +84,6 @@ install-brews: install-brews-$(os) ## install brews
 	#$(homebrew_bin) install mitmproxy
 	-$(homebrew_bin) install monochromegane/pt/pt
 	#$(homebrew_bin) install neovim
-	-$(homebrew_bin) install denji/nginx/nginx-full --with-subs-filter-module
 	#$(homebrew_bin) install nodebrew
 	-$(homebrew_bin) install peco
 	-$(homebrew_bin) install pyenv
