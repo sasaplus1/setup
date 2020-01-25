@@ -7,10 +7,23 @@ git:
 
 jobs:
   include:
-    - osx_image: xcode8
-    - osx_image: xcode9.2
-    - osx_image: xcode10.1
     - osx_image: xcode11.3
+    - osx_image: xcode10.1
+      before_script:
+        - git config --global protocol.version 1
+
+addons:
+  homebrew:
+    packages:
+      - git
+    update: true
+
+cache:
+  directories:
+    - $HOME/Library/Caches/Homebrew
 
 script:
   - make setup
+
+before_cache:
+  - brew cleanup
