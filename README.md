@@ -1,6 +1,7 @@
 # setup
 
 [![test](https://github.com/sasaplus1/setup/workflows/test/badge.svg)](https://github.com/sasaplus1/setup/actions?query=workflow%3Atest)
+[![Build Status](https://travis-ci.com/sasaplus1/setup.svg?branch=master)](https://travis-ci.com/sasaplus1/setup)
 
 setup scripts for my environment
 
