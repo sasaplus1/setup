@@ -1,6 +1,7 @@
 os: osx
 
-language: minimal
+# NOTE: minimal is alias of shell
+language: shell
 
 git:
   depth: 1
