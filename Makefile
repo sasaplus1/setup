@@ -109,8 +109,8 @@ install-brews-linux: ## install brews for Linux
 
 .PHONY: install-brews-macos
 install-brews-macos: ## install brews for macOS
-	#$(homebrew_bin) install android-platform-tools
-	#$(homebrew_bin) install fswatch
+	-$(homebrew_bin) install android-platform-tools
+	-$(homebrew_bin) install fswatch
 	-$(homebrew_bin) install mas
 	#$(homebrew_bin) install reattach-to-user-namespace
 	#$(homebrew_bin) install unar
