@@ -67,6 +67,7 @@ fetch-brew-casks: ## install brew casks
 
 .PHONY: install-brews
 install-brews: install-brews-$(os) ## install brews
+	-$(homebrew_bin) install bash
 	-$(homebrew_bin) install bash-completion
 	-$(homebrew_bin) install bat
 	#$(homebrew_bin) install ctags
