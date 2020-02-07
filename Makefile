@@ -101,7 +101,7 @@ install-brews: install-brews-$(os) ## install brews
 	-$(homebrew_bin) install tig
 	-$(homebrew_bin) install tmux
 	-$(homebrew_bin) install tree
-	-$(homebrew_bin) install universal-ctags/universal-ctags/universal-ctags
+	-$(homebrew_bin) install --HEAD universal-ctags/universal-ctags/universal-ctags
 	#$(homebrew_bin) install vcprompt
 	-$(homebrew_bin) install z
 
