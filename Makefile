@@ -41,6 +41,7 @@ clone-urxvt-extension: ## get urxvt extension
 fetch-brew-casks: ## install brew casks
 	#$(homebrew_bin) cask fetch alacritty
 	-$(homebrew_bin) cask fetch alfred
+	-$(homebrew_bin) cask fetch android-platform-tools
 	#$(homebrew_bin) cask fetch chromium
 	-$(homebrew_bin) cask fetch docker
 	#$(homebrew_bin) cask fetch dropbox
@@ -110,7 +111,6 @@ install-brews-linux: ## install brews for Linux
 
 .PHONY: install-brews-macos
 install-brews-macos: ## install brews for macOS
-	-$(homebrew_bin) install android-platform-tools
 	-$(homebrew_bin) install fswatch
 	-$(homebrew_bin) install mas
 	#$(homebrew_bin) install reattach-to-user-namespace
