@@ -74,6 +74,7 @@ install-brews: install-brews-$(os) ## install brews
 	#$(homebrew_bin) install ctags
 	-$(homebrew_bin) install denji/nginx/nginx-full --with-subs-filter-module
 	#$(homebrew_bin) install docker
+	-$(homebrew_bin) install exa
 	-$(homebrew_bin) install fd
 	-$(homebrew_bin) install fzf
 	-$(homebrew_bin) install ghq
