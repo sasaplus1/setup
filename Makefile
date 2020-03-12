@@ -87,6 +87,7 @@ install-brews: install-brews-$(os) ## install brews
 	#$(homebrew_bin) install mercurial
 	#$(homebrew_bin) install mitmproxy
 	-$(homebrew_bin) install monochromegane/pt/pt
+	-$(homebrew_bin) install mosh
 	#$(homebrew_bin) install neovim
 	#$(homebrew_bin) install nodebrew
 	-$(homebrew_bin) install peco
