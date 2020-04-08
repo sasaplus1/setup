@@ -85,12 +85,13 @@ install-brews: install-brews-$(os) ## install brews
 	-$(homebrew_bin) install itchyny/tap/mmv
 	-$(homebrew_bin) install jq
 	#$(homebrew_bin) install mercurial
-	#$(homebrew_bin) install mitmproxy
+	-$(homebrew_bin) install mitmproxy
 	-$(homebrew_bin) install monochromegane/pt/pt
 	-$(homebrew_bin) install mosh
 	#$(homebrew_bin) install neovim
 	#$(homebrew_bin) install nodebrew
 	-$(homebrew_bin) install peco
+	-$(homebrew_bin) install procs
 	-$(homebrew_bin) install pyenv
 	-$(homebrew_bin) install ranger
 	-$(homebrew_bin) install rbenv
