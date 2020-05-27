@@ -80,6 +80,7 @@ install-brews: install-brews-$(os) ## install brews
 	-$(homebrew_bin) install ghq
 	-$(homebrew_bin) install gibo
 	-$(homebrew_bin) install git
+	-$(homebrew_bin) install git-delta
 	-$(homebrew_bin) install go
 	-$(homebrew_bin) install hub
 	-$(homebrew_bin) install itchyny/tap/mmv
