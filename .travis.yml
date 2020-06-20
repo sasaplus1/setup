@@ -20,7 +20,7 @@ addons:
 
 cache:
   directories:
-    - $HOME/Library/Caches/Homebrew
+    - /usr/local/Homebrew/cache
 
 script:
   - make setup
