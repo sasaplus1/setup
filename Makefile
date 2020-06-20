@@ -39,7 +39,7 @@ clone-urxvt-extension: ## get urxvt extension
 
 .PHONY: fetch-brew-casks
 fetch-brew-casks: ## install brew casks
-	#$(homebrew_bin) cask fetch alacritty
+	-$(homebrew_bin) cask fetch alacritty
 	-$(homebrew_bin) cask fetch alfred
 	-$(homebrew_bin) cask fetch android-platform-tools
 	#$(homebrew_bin) cask fetch chromium
@@ -54,7 +54,7 @@ fetch-brew-casks: ## install brew casks
 	#$(homebrew_bin) cask fetch insomnia
 	#$(homebrew_bin) cask fetch iterm2
 	-$(homebrew_bin) cask fetch kap
-	-$(homebrew_bin) cask fetch delphinus/macvim-kaoriya/macvim-kaoriya
+	#$(homebrew_bin) cask fetch delphinus/macvim-kaoriya/macvim-kaoriya
 	-$(homebrew_bin) cask fetch ngrok
 	-$(homebrew_bin) cask fetch safari-technology-preview
 	#$(homebrew_bin) cask fetch send-to-kindle
@@ -87,14 +87,14 @@ install-brews: install-brews-$(os) ## install brews
 	-$(homebrew_bin) install jq
 	#$(homebrew_bin) install mercurial
 	-$(homebrew_bin) install mitmproxy
-	-$(homebrew_bin) install monochromegane/pt/pt
+	#$(homebrew_bin) install monochromegane/pt/pt
 	-$(homebrew_bin) install mosh
 	#$(homebrew_bin) install neovim
 	#$(homebrew_bin) install nodebrew
-	-$(homebrew_bin) install peco
+	#$(homebrew_bin) install peco
 	-$(homebrew_bin) install procs
 	-$(homebrew_bin) install pyenv
-	-$(homebrew_bin) install ranger
+	#$(homebrew_bin) install ranger
 	-$(homebrew_bin) install rbenv
 	-$(homebrew_bin) install rbenv-default-gems
 	#$(homebrew_bin) install redis
