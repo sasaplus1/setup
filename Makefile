@@ -9,7 +9,8 @@ os := $(subst darwin,macos,$(shell uname -s | tr 'A-Z' 'a-z'))
 
 # for macOS
 ifeq ($(os),macos)
-  homebrew_dir := $(HOME)/Homebrew
+# homebrew_dir := $(HOME)/Homebrew
+  homebrew_dir := /usr/local/Homebrew
 else
   homebrew_dir := $(HOME)/.linuxbrew/Homebrew
 endif
@@ -137,8 +138,9 @@ install-homebrew-linux: ## install Homebrew for Linux
 
 .PHONY: install-homebrew-macos
 install-homebrew-macos: ## install Homebrew for macOS
-	mkdir -p '$(homebrew_dir)'
-	curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C '$(homebrew_dir)'
+	# mkdir -p '$(homebrew_dir)'
+	# curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C '$(homebrew_dir)'
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 .PHONY: set-defaults
 set-defaults: ## set defaults for macOS
