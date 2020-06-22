@@ -33,6 +33,10 @@ $ curl -L https://git.io/sasaplus1-setup -o Makefile
 $ make setup
 ```
 
+## Related
+
+- [dotfiles](https://github.com/sasaplus1/dotfiles)
+
 ## License
 
 The MIT license.
