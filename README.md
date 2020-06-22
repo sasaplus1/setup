@@ -14,9 +14,22 @@ $ sudo apt update --yes
 $ sudo apt install --yes build-essential curl file git
 ```
 
+execute command the below if macOS:
+
+```console
+$ xcode-select --install
+```
+
 setup my environment:
 
 ```console
+$ make setup
+```
+
+## Setup without repository
+
+```console
+$ curl -L https://git.io/sasaplus1-setup -o Makefile
 $ make setup
 ```
 
