@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    # NOTE: at AM8:05 everyday by JST
+    # NOTE: at 8:05 am everyday by JST
     - cron: '5 23 * * *'
 
 jobs:
