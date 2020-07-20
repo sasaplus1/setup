@@ -133,6 +133,7 @@ install-brews: install-brews-$(os) ## install brews
 	-brew install ghq
 	-brew install gibo
 	-brew install git
+	-brew install github/gh/gh
 	-brew install git-delta
 	-brew install go
 	-brew install hub
