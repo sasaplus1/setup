@@ -190,6 +190,7 @@ fetch-brew-casks: ## install brew casks
 	-brew cask fetch alacritty
 	-brew cask fetch alfred
 	-brew cask fetch android-platform-tools
+	-brew cask fetch bitwarden
 	#brew cask fetch chromium
 	-brew cask fetch docker
 	#brew cask fetch dropbox
