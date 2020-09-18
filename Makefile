@@ -124,6 +124,7 @@ install-brews: install-brews-$(os) ## install brews
 	-brew install bash
 	-brew install bash-completion
 	-brew install bat
+	-brew install bitwarden-cli
 	#brew install ctags
 	#brew install denji/nginx/nginx-full --with-subs-filter-module
 	#brew install docker
