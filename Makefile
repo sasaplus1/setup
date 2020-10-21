@@ -144,6 +144,7 @@ install-brews: install-brews-$(os) ## install brews
 	-brew install mitmproxy
 	#brew install monochromegane/pt/pt
 	-brew install mosh
+	-brew install muesli/tap/duf
 	#brew install neovim
 	#brew install nodebrew
 	#brew install peco
