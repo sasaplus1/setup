@@ -40,12 +40,14 @@ setup: setup-$(os) ## setup
 setup-linux: install-homebrew ## setup Linux
 	$(MAKE) -f $(makefile) update-homebrew
 	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts install-brews
+	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) clone-urxvt-extension
 
 .PHONY: setup-macos
 setup-macos: install-homebrew ## setup macOS
 	$(MAKE) -f $(makefile) update-homebrew
 	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts install-brews
+	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) fetch-brew-casks set-defaults
 
 # }}}
@@ -134,7 +136,7 @@ install-brews: install-brews-$(os) ## install brews
 	-brew install ghq
 	-brew install gibo
 	-brew install git
-	-brew install github/gh/gh
+	-brew install gh
 	-brew install git-delta
 	-brew install go
 	-brew install hub
@@ -164,7 +166,7 @@ install-brews: install-brews-$(os) ## install brews
 	-brew install tree
 	-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 	#brew install vcprompt
-	-brew install z
+	#brew install z
 
 .PHONY: install-brews-linux
 install-brews-linux: ## install brews for Linux
@@ -177,6 +179,13 @@ install-brews-macos: ## install brews for macOS
 	#brew install unar
 
 # }}}
+
+#-------------------------------------------------------------------------------
+
+.PHONY: install-apps
+install-apps: root := $$HOME/.ghq/github.com
+install-apps: ## install apps
+	-git clone --depth 1 https://github.com/rupa/z.git "$(root)/rupa/z"
 
 #-------------------------------------------------------------------------------
 
@@ -223,3 +232,5 @@ set-defaults: ## set defaults for macOS
 	defaults write com.apple.finder _FXShowPosixPathInTitle TRUE
 
 # }}}
+
+# vim:fdm=marker:
