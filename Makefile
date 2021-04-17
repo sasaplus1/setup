@@ -219,6 +219,7 @@ fetch-brew-casks: ## install brew casks
 	-brew cask fetch safari-technology-preview
 	#brew cask fetch send-to-kindle
 	#brew cask fetch simple-comic
+	-brew cask fetch skitch
 	-brew cask fetch slate
 	-brew cask fetch softu2f
 	#brew cask fetch terminus
