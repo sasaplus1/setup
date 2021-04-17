@@ -126,7 +126,7 @@ install-brews: install-brews-$(os) ## install brews
 	-brew install bash
 	-brew install bash-completion
 	-brew install bat
-	-brew install bitwarden-cli
+	#brew install bitwarden-cli
 	#brew install ctags
 	#brew install denji/nginx/nginx-full --with-subs-filter-module
 	#brew install docker
@@ -139,7 +139,7 @@ install-brews: install-brews-$(os) ## install brews
 	-brew install gh
 	-brew install git-delta
 	-brew install go
-	-brew install hub
+	#brew install hub
 	-brew install itchyny/tap/mmv
 	-brew install jq
 	#brew install mercurial
@@ -151,20 +151,20 @@ install-brews: install-brews-$(os) ## install brews
 	#brew install nodebrew
 	#brew install peco
 	-brew install procs
-	-brew install pyenv
+	#brew install pyenv
 	#brew install ranger
-	-brew install rbenv
-	-brew install rbenv-default-gems
+	#brew install rbenv
+	#brew install rbenv-default-gems
 	#brew install redis
 	-brew install ripgrep
-	-brew install ruby-build
+	#brew install ruby-build
 	#brew install sqlite
 	#brew install textql
 	#brew install the_silver_searcher
 	-brew install tig
 	-brew install tmux
 	-brew install tree
-	-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+	#brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 	#brew install vcprompt
 	#brew install z
 
@@ -174,7 +174,7 @@ install-brews-linux: ## install brews for Linux
 .PHONY: install-brews-macos
 install-brews-macos: ## install brews for macOS
 	-brew install fswatch
-	-brew install mas
+	#brew install mas
 	#brew install reattach-to-user-namespace
 	#brew install unar
 
