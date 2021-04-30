@@ -198,10 +198,10 @@ clone-urxvt-extension: ## get urxvt extension
 .PHONY: fetch-brew-casks
 fetch-brew-casks: homebrew-installed
 fetch-brew-casks: ## install brew casks
-	-brew cask fetch alacritty
+	#brew cask fetch alacritty
 	-brew cask fetch alfred
 	-brew cask fetch android-platform-tools
-	-brew cask fetch bitwarden
+	#brew cask fetch bitwarden
 	#brew cask fetch chromium
 	-brew cask fetch docker
 	#brew cask fetch dropbox
@@ -215,13 +215,13 @@ fetch-brew-casks: ## install brew casks
 	#brew cask fetch iterm2
 	-brew cask fetch kap
 	#brew cask fetch delphinus/macvim-kaoriya/macvim-kaoriya
-	-brew cask fetch ngrok
+	#brew cask fetch ngrok
 	-brew cask fetch safari-technology-preview
 	#brew cask fetch send-to-kindle
 	#brew cask fetch simple-comic
 	-brew cask fetch skitch
 	-brew cask fetch slate
-	-brew cask fetch softu2f
+	#brew cask fetch softu2f
 	#brew cask fetch terminus
 	#brew cask fetch vagrant
 	-brew cask fetch virtualbox
