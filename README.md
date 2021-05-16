@@ -37,6 +37,7 @@ $ make setup
 
 - [dotfiles](https://github.com/sasaplus1/dotfiles)
 - [macos-bash](https://github.com/sasaplus1/macos-bash)
+- [macos-tmux](https://github.com/sasaplus1/macos-tmux)
 - [macos-vim](https://github.com/sasaplus1/macos-vim)
 
 ## License
