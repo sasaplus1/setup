@@ -14,7 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: make setup
-      - run: ./bash && "$HOME/Local/bin/bash" --version
   on-ubuntu:
     name: Ubuntu
     runs-on: ubuntu-latest
@@ -23,4 +22,3 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: make setup
-      - run: ./bash && "$HOME/Local/bin/bash" --version
