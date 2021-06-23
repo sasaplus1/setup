@@ -44,10 +44,12 @@ $ make setup
 - [ ] [Google Chrome](https://www.google.com/chrome/)
 - [ ] [Google Chrome Canary](https://www.google.com/chrome/canary/)
 - [ ] [Kap](https://getkap.co/)
+- [ ] [ngrok](https://ngrok.com/)
 - [ ] [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [ ] [Sketch](https://www.sketch.com/)
 - [ ] [Skitch](https://evernote.com/products/skitch)
 - [ ] [Slate](https://github.com/jigish/slate)
+- [ ] [Vagrant](https://www.vagrantup.com/)
 - [ ] [VirtualBox](https://www.virtualbox.org/)
 - [ ] [Visual Studio Code](https://code.visualstudio.com/)
 
