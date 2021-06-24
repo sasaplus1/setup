@@ -38,6 +38,32 @@ setup-macos: ## setup macOS
 
 # installation targets {{{
 
+.PHONY: install-ports
+install-ports: port ?= sudo port
+install-ports:
+	-$(port) install bash
+	-$(port) install bash-completion
+	-$(port) install bat
+	-$(port) install duf
+	-$(port) install exa
+	-$(port) install fd
+	-$(port) install fswatch
+	-$(port) install fzf
+	#$(port) install gh
+	#$(port) install ghq
+	#$(port) install gibo
+	-$(port) install git
+	-$(port) install git-delta
+	#$(port) install go
+	-$(port) install go-mmv
+	-$(port) install jq
+	-$(port) install mosh
+	-$(port) install procs
+	-$(port) install py-mitmproxy
+	-$(port) install ripgrep
+	-$(port) install tig
+	-$(port) install tmux
+
 .PHONY: install-scripts
 install-scripts: root := $$HOME/.ghq/github.com
 install-scripts: ## install apps
