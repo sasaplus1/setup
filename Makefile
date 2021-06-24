@@ -37,33 +37,16 @@ homebrew-installed: ## check Homebrew installed
 setup: setup-$(os) ## setup
 
 .PHONY: setup-linux
-setup-linux: install-homebrew ## setup Linux
+setup-linux: ## setup Linux
 	$(MAKE) -f $(makefile) update-homebrew
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) clone-urxvt-extension
 
 .PHONY: setup-macos
-setup-macos: install-homebrew ## setup macOS
+setup-macos: ## setup macOS
 	$(MAKE) -f $(makefile) update-homebrew
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) set-defaults
-
-# }}}
-
-#-------------------------------------------------------------------------------
-
-# install Homebrew {{{
-
-.PHONY: install-homebrew
-install-homebrew: install-homebrew-$(os) ## install Homebrew
-
-.PHONY: install-homebrew-linux
-install-homebrew-linux: ## install Homebrew for Linux
-	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-.PHONY: install-homebrew-macos
-install-homebrew-macos: ## install Homebrew for macOS
-	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # }}}
 
