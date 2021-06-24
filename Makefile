@@ -7,14 +7,6 @@ makefile_dir := $(dir $(makefile))
 
 os := $(subst darwin,macos,$(shell uname -s | tr 'A-Z' 'a-z'))
 
-ifeq ($(os),macos)
-  export PATH := /usr/local/Homebrew/bin:$(PATH)
-else
-  export PATH := /home/linuxbrew/.linuxbrew/bin:$(HOME)/.linuxbrew/bin:$(PATH)
-endif
-
-brew ?= $(shell type -tP brew)
-
 #-------------------------------------------------------------------------------
 
 # common {{{
