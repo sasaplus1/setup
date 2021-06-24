@@ -24,23 +24,23 @@ setup: setup-$(os) ## setup
 
 .PHONY: setup-linux
 setup-linux: ## setup Linux
-	$(MAKE) -f $(makefile) install-apps
+	$(MAKE) -f $(makefile) install-scripts
 	$(MAKE) -f $(makefile) clone-urxvt-extension
 
 .PHONY: setup-macos
 setup-macos: ## setup macOS
-	$(MAKE) -f $(makefile) install-apps
+	$(MAKE) -f $(makefile) install-scripts
 	$(MAKE) -f $(makefile) set-defaults
 
 # }}}
 
 #-------------------------------------------------------------------------------
 
-# {{{
+# installation targets {{{
 
-.PHONY: install-apps
-install-apps: root := $$HOME/.ghq/github.com
-install-apps: ## install apps
+.PHONY: install-scripts
+install-scripts: root := $$HOME/.ghq/github.com
+install-scripts: ## install apps
 	-git clone --depth 1 https://github.com/rupa/z.git "$(root)/rupa/z"
 
 # }}}
