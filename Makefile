@@ -54,7 +54,6 @@ install-ports:
 	#$(port) install gibo
 	-$(port) install git
 	-$(port) install git-delta
-	#$(port) install go
 	-$(port) install go-mmv
 	-$(port) install jq
 	-$(port) install mosh
