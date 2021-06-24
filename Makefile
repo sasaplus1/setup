@@ -23,12 +23,6 @@ brew ?= $(shell type -tP brew)
 all: ## output targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(makefile) | awk 'BEGIN { FS = ":.*?## " }; { printf "\033[36m%-30s\033[0m %s\n", $$1, $$2 }'
 
-.PHONY: homebrew-installed
-homebrew-installed: ## check Homebrew installed
-	type brew
-
-# }}}
-
 #-------------------------------------------------------------------------------
 
 # setup {{{
@@ -38,26 +32,13 @@ setup: setup-$(os) ## setup
 
 .PHONY: setup-linux
 setup-linux: ## setup Linux
-	$(MAKE) -f $(makefile) update-homebrew
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) clone-urxvt-extension
 
 .PHONY: setup-macos
 setup-macos: ## setup macOS
-	$(MAKE) -f $(makefile) update-homebrew
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) set-defaults
-
-# }}}
-
-#-------------------------------------------------------------------------------
-
-# update Homebrew {{{
-
-.PHONY: update-homebrew
-update-homebrew: homebrew-installed
-update-homebrew: ## update Homebrew
-	brew update
 
 # }}}
 
