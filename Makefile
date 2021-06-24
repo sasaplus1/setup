@@ -42,7 +42,7 @@ setup-macos: ## setup macOS
 
 .PHONY: install-ports
 install-ports: port ?= sudo port
-install-ports:
+install-ports: ## install ports
 	-$(port) install bash
 	-$(port) install bash-completion
 	-$(port) install bat
@@ -57,9 +57,9 @@ install-ports:
 	-$(port) install git-delta
 	-$(port) install go-mmv
 	-$(port) install jq
-	-$(port) install mosh
+	#$(port) install mosh
 	-$(port) install procs
-	-$(port) install py-mitmproxy
+	#$(port) install py-mitmproxy
 	-$(port) install ripgrep
 	-$(port) install tig
 	-$(port) install tmux
