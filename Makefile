@@ -39,14 +39,12 @@ setup: setup-$(os) ## setup
 .PHONY: setup-linux
 setup-linux: install-homebrew ## setup Linux
 	$(MAKE) -f $(makefile) update-homebrew
-	$(MAKE) -f $(makefile) add-homebrew-taps
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) clone-urxvt-extension
 
 .PHONY: setup-macos
 setup-macos: install-homebrew ## setup macOS
 	$(MAKE) -f $(makefile) update-homebrew
-	$(MAKE) -f $(makefile) add-homebrew-taps
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) set-defaults
 
@@ -82,34 +80,14 @@ update-homebrew: ## update Homebrew
 
 #-------------------------------------------------------------------------------
 
-# add Homebrew taps {{{
-
-.PHONY: add-homebrew-taps
-add-homebrew-taps: homebrew-installed
-add-homebrew-taps: add-homebrew-taps-$(os) ## add brew taps
-
-.PHONY: add-homebrew-taps-linux
-add-homebrew-taps-linux: ## add brew taps for Linux
-
-.PHONY: add-homebrew-taps-macos
-add-homebrew-taps-macos: ## add brew taps for macOS
-	brew tap homebrew/cask-fonts
-	brew tap homebrew/cask-versions
-
-# }}}
-
-#-------------------------------------------------------------------------------
-
-
-# }}}
-
-#-------------------------------------------------------------------------------
-
+# {{{
 
 .PHONY: install-apps
 install-apps: root := $$HOME/.ghq/github.com
 install-apps: ## install apps
 	-git clone --depth 1 https://github.com/rupa/z.git "$(root)/rupa/z"
+
+# }}}
 
 #-------------------------------------------------------------------------------
 
