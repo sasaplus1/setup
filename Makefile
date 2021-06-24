@@ -51,7 +51,6 @@ install-ports:
 	-$(port) install fzf
 	#$(port) install gh
 	#$(port) install ghq
-	#$(port) install gibo
 	-$(port) install git
 	-$(port) install git-delta
 	-$(port) install go-mmv
@@ -66,6 +65,7 @@ install-ports:
 .PHONY: install-scripts
 install-scripts: root := $$HOME/.ghq/github.com
 install-scripts: ## install apps
+	-git clone --depth 1 https://github.com/simonwhitaker/gibo "$(root)/simonwhitaker/gibo"
 	-git clone --depth 1 https://github.com/rupa/z.git "$(root)/rupa/z"
 
 # }}}
