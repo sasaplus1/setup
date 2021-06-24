@@ -39,14 +39,14 @@ setup: setup-$(os) ## setup
 .PHONY: setup-linux
 setup-linux: install-homebrew ## setup Linux
 	$(MAKE) -f $(makefile) update-homebrew
-	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts
+	$(MAKE) -f $(makefile) add-homebrew-taps
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) clone-urxvt-extension
 
 .PHONY: setup-macos
 setup-macos: install-homebrew ## setup macOS
 	$(MAKE) -f $(makefile) update-homebrew
-	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts
+	$(MAKE) -f $(makefile) add-homebrew-taps
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) set-defaults
 
@@ -100,26 +100,11 @@ add-homebrew-taps-macos: ## add brew taps for macOS
 
 #-------------------------------------------------------------------------------
 
-# install fonts {{{
-
-.PHONY: install-fonts
-install-fonts: homebrew-installed
-install-fonts: install-fonts-$(os) ## install fonts
-
-.PHONY: install-fonts-linux
-install-fonts-linux: ## install fonts for Linux
-
-.PHONY: install-fonts-macos
-install-fonts-macos: ## install fonts for macOS
-	-brew cask install font-inconsolata
-	-brew cask install font-migmix-1p
 
 # }}}
 
 #-------------------------------------------------------------------------------
 
-
-#-------------------------------------------------------------------------------
 
 .PHONY: install-apps
 install-apps: root := $$HOME/.ghq/github.com
