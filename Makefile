@@ -39,14 +39,14 @@ setup: setup-$(os) ## setup
 .PHONY: setup-linux
 setup-linux: install-homebrew ## setup Linux
 	$(MAKE) -f $(makefile) update-homebrew
-	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts install-brews
+	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) clone-urxvt-extension
 
 .PHONY: setup-macos
 setup-macos: install-homebrew ## setup macOS
 	$(MAKE) -f $(makefile) update-homebrew
-	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts install-brews
+	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts
 	$(MAKE) -f $(makefile) install-apps
 	$(MAKE) -f $(makefile) set-defaults
 
@@ -118,67 +118,6 @@ install-fonts-macos: ## install fonts for macOS
 
 #-------------------------------------------------------------------------------
 
-# install brews {{{
-
-.PHONY: install-brews
-install-brews: homebrew-installed
-install-brews: install-brews-$(os) ## install brews
-	-brew install bash
-	-brew install bash-completion
-	-brew install bat
-	#brew install bitwarden-cli
-	#brew install ctags
-	#brew install denji/nginx/nginx-full --with-subs-filter-module
-	#brew install docker
-	-brew install exa
-	-brew install fd
-	-brew install fzf
-	-brew install ghq
-	-brew install gibo
-	-brew install git
-	-brew install gh
-	-brew install git-delta
-	-brew install go
-	#brew install hub
-	-brew install itchyny/tap/mmv
-	-brew install jq
-	#brew install mercurial
-	-brew install mitmproxy
-	#brew install monochromegane/pt/pt
-	-brew install mosh
-	-brew install muesli/tap/duf
-	#brew install neovim
-	#brew install nodebrew
-	#brew install peco
-	-brew install procs
-	#brew install pyenv
-	#brew install ranger
-	#brew install rbenv
-	#brew install rbenv-default-gems
-	#brew install redis
-	-brew install ripgrep
-	#brew install ruby-build
-	#brew install sqlite
-	#brew install textql
-	#brew install the_silver_searcher
-	-brew install tig
-	-brew install tmux
-	-brew install tree
-	#brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-	#brew install vcprompt
-	#brew install z
-
-.PHONY: install-brews-linux
-install-brews-linux: ## install brews for Linux
-
-.PHONY: install-brews-macos
-install-brews-macos: ## install brews for macOS
-	-brew install fswatch
-	#brew install mas
-	#brew install reattach-to-user-namespace
-	#brew install unar
-
-# }}}
 
 #-------------------------------------------------------------------------------
 
