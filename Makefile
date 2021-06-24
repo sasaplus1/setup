@@ -48,7 +48,7 @@ setup-macos: install-homebrew ## setup macOS
 	$(MAKE) -f $(makefile) update-homebrew
 	$(MAKE) -f $(makefile) add-homebrew-taps install-fonts install-brews
 	$(MAKE) -f $(makefile) install-apps
-	$(MAKE) -f $(makefile) fetch-brew-casks set-defaults
+	$(MAKE) -f $(makefile) set-defaults
 
 # }}}
 
@@ -194,38 +194,6 @@ install-apps: ## install apps
 .PHONY: clone-urxvt-extension
 clone-urxvt-extension: ## get urxvt extension
 	git clone https://github.com/muennich/urxvt-perls.git $$HOME/.urxvt/urxvt-perls
-
-.PHONY: fetch-brew-casks
-fetch-brew-casks: homebrew-installed
-fetch-brew-casks: ## install brew casks
-	#brew cask fetch alacritty
-	-brew cask fetch alfred
-	-brew cask fetch android-platform-tools
-	#brew cask fetch bitwarden
-	#brew cask fetch chromium
-	-brew cask fetch docker
-	#brew cask fetch dropbox
-	-brew cask fetch firefox --language=ja
-	-brew cask fetch firefox-developer-edition --language=ja
-	-brew cask fetch google-chrome
-	-brew cask fetch google-chrome-canary
-	#brew cask fetch gyazo
-	#brew cask fetch hyper
-	#brew cask fetch insomnia
-	#brew cask fetch iterm2
-	-brew cask fetch kap
-	#brew cask fetch delphinus/macvim-kaoriya/macvim-kaoriya
-	#brew cask fetch ngrok
-	-brew cask fetch safari-technology-preview
-	#brew cask fetch send-to-kindle
-	#brew cask fetch simple-comic
-	-brew cask fetch skitch
-	-brew cask fetch slate
-	#brew cask fetch softu2f
-	#brew cask fetch terminus
-	#brew cask fetch vagrant
-	-brew cask fetch virtualbox
-	-brew cask fetch visual-studio-code
 
 .PHONY: set-defaults
 set-defaults: ## set defaults for macOS
