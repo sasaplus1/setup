@@ -8,14 +8,22 @@ on:
     - cron: '5 23 * * *'
 
 jobs:
+  macos-ports:
+    name: install MacPorts
+    runs-on: macOS-latest
+    steps:
+      - run: curl -LO https://raw.githubusercontent.com/GiovanniBussi/macports-ci/master/macports-ci
+      - run: source ./macports-ci install
+      - uses: actions/checkout@v2
+      - run: make install-ports
   on-macos:
-    name: macOS
+    name: setup macOS
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
       - run: make setup
   on-ubuntu:
-    name: Ubuntu
+    name: setup Ubuntu
     runs-on: ubuntu-latest
     env:
       LANG: C
