@@ -52,7 +52,7 @@ install-ports: ## install ports
 	-$(port) install fswatch
 	-$(port) install fzf
 	-$(port) install gh
-	#$(port) install ghq
+	#$(port) install ghq # NOTE: Not found
 	-$(port) install git
 	-$(port) install git-delta
 	#$(port) install go
