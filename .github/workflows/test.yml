@@ -16,6 +16,14 @@ jobs:
       - run: source ./macports-ci install
       - uses: actions/checkout@v2
       - run: make install-ports
+  ubuntu-apt:
+    name: install APT packages
+    runs-on: ubuntu-latest
+    env:
+      LANG: C
+    steps:
+      - uses: actions/checkout@v2
+      - run: make install-apt-packages
   on-macos:
     name: setup macOS
     runs-on: macOS-latest
