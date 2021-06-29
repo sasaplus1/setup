@@ -46,8 +46,8 @@ install-ports: ## install ports
 	-$(port) install bash
 	-$(port) install bash-completion
 	-$(port) install bat
-	-$(port) install duf
-	-$(port) install exa
+	#$(port) install duf
+	#$(port) install exa
 	-$(port) install fd
 	-$(port) install fswatch
 	-$(port) install fzf
@@ -55,10 +55,11 @@ install-ports: ## install ports
 	#$(port) install ghq
 	-$(port) install git
 	-$(port) install git-delta
+	#$(port) install go
 	-$(port) install go-mmv
 	-$(port) install jq
 	#$(port) install mosh
-	-$(port) install procs
+	#$(port) install procs
 	#$(port) install py-mitmproxy
 	-$(port) install ripgrep
 	-$(port) install tig
