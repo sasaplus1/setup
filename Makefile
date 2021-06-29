@@ -40,9 +40,33 @@ setup-macos: ## setup macOS
 
 # installation targets {{{
 
+.PHONY: install-apt-packages
+install-apt-packages: apt ?= sudo apt-get --yes
+install-apt-packages: ## install apt packages for Ubuntu/Debian
+	-$(apt) install bash
+	-$(apt) install bash-completion
+	-$(apt) install bat
+	#$(apt) install duf # NOTE: Not found
+	#$(apt) install exa
+	-$(apt) install fd-find
+	-$(apt) install fzf
+	#$(apt) install gh # NOTE: Not found
+	#$(apt) install ghq # NOTE: Not found
+	-$(apt) install git
+	#$(apt) install git-delta # NOTE: Not found
+	#$(apt) install golang
+	#$(apt) install mmv # NOTE: Isn't itchyny/mmv
+	-$(apt) install jq
+	#$(apt) install mitmproxy
+	#$(apt) install mosh
+	#$(apt) install procs # NOTE: Not found
+	-$(apt) install ripgrep
+	-$(apt) install tig
+	-$(apt) install tmux
+
 .PHONY: install-ports
 install-ports: port ?= sudo port
-install-ports: ## install ports
+install-ports: ## install ports for macOS
 	-$(port) install bash
 	-$(port) install bash-completion
 	-$(port) install bat
