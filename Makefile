@@ -43,6 +43,7 @@ setup-macos: ## setup macOS
 .PHONY: install-apt-packages
 install-apt-packages: apt ?= sudo apt-get --yes
 install-apt-packages: ## install apt packages for Ubuntu/Debian
+	-$(apt) update
 	-$(apt) install bash
 	-$(apt) install bash-completion
 	-$(apt) install bat
@@ -67,6 +68,7 @@ install-apt-packages: ## install apt packages for Ubuntu/Debian
 .PHONY: install-ports
 install-ports: port ?= sudo port
 install-ports: ## install ports for macOS
+	-$(port) selfupdate
 	-$(port) install bash
 	-$(port) install bash-completion
 	-$(port) install bat
