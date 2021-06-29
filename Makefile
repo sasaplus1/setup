@@ -40,6 +40,43 @@ setup-macos: ## setup macOS
 
 # installation targets {{{
 
+ifeq ($(os),macos)
+  jq-bin := jq-osx-amd64
+else
+  jq-bin := jq-linux64
+endif
+.PHONY: bootstrap-binary
+bootstrap-binary: ## download bootstrap gh and jq
+	curl -fsSL 'https://git.io/sasaplus1-gh' | bash -
+	tar fx ./gh.tar.gz --strip-components 2 'gh*/bin/gh'
+	curl -fsSL 'https://github.com/stedolan/jq/releases/download/jq-1.6/$(jq-bin)' -o ./jq
+	chmod +x ./jq
+
+ifeq ($(shell uname -m),arm64)
+  cpu :=
+else
+  cpu := (amd|x86_?)64
+endif
+ifeq ($(os),macos)
+  filter := grep -Ei 'darwin|mac|osx' | grep -Ei '(amd|x86_?)64'
+else
+  filter := grep -Ei 'linux|lnx' | grep -Ei '(amd|x86_?)64'
+endif
+.PHONY: download-binary
+download-binary: binaries :=
+download-binary: binaries += cli/cli # gh
+download-binary: binaries += dandavison/delta
+download-binary: binaries += itchyny/mmv
+download-binary: binaries += x-motemen/ghq
+download-binary: gh ?= ./gh
+download-binary: jq ?= ./jq
+download-binary: ## download binaries
+	@printf -- '%s\n' $(binaries) | xargs -n 1 -I % $(gh) release view --repo % --json assets | $(jq) -r '.assets[].url'
+
+.PHONY: clean-binary
+clean-binary:
+	$(RM) ./gh ./jq
+
 .PHONY: install-apt-packages
 install-apt-packages: apt ?= sudo apt-get --yes
 install-apt-packages: ## install apt packages for Ubuntu/Debian
