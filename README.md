@@ -32,7 +32,7 @@ $ make setup
 
 <details>
 
-<summary>Install GUI applications for macOS</summary>
+<summary>Install applications for macOS</summary>
 
 - [ ] [Alfred](https://www.alfredapp.com/)
 - [ ] [Android SDK Platform-Tools](https://developer.android.com/studio/releases/platform-tools)
