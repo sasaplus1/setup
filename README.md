@@ -56,18 +56,20 @@ $ make setup
 
 <details>
 
-<summary>Import browser bookmarks and install browser extensions</summary>
+<summary>Configure browser, import browser bookmarks and install browser extensions</summary>
 
-- [ ] Firefox Bookmarks
-- [ ] Chrome Bookmarks
-- Firefox Addons
+- [ ] Firefox Configurations
+- [ ] Chrome Configurations
+- [ ] Firefox bookmarks
+- [ ] Chrome bookmarks
+- Firefox addons
     - [ ] [Bitwarden](https://addons.mozilla.org/ja/firefox/addon/bitwarden-password-manager/)
     - [ ] [Firefox Multi-Account Containers](https://addons.mozilla.org/ja/firefox/addon/multi-account-containers/)
     - [ ] [Mouse Dictionry](https://addons.mozilla.org/ja/firefox/addon/mousedictionary/)
     - [ ] [OctoLinker](https://addons.mozilla.org/ja/firefox/addon/octolinker/)
     - [ ] [Simple Translate](https://addons.mozilla.org/ja/firefox/addon/simple-translate/)
     - [ ] [Switch Container](https://addons.mozilla.org/ja/firefox/addon/switch-container/)
-- Chrome Extensions
+- Chrome extensions
     - [ ] [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna)
     - [ ] [ChromeLens](https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd)
     - [ ] [Google 翻訳](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
