@@ -86,6 +86,14 @@ $ make setup
 
 <details>
 
+<summary>Install Visual Studio Code extensions</summary>
+
+- [ ] [Quit Control for VSCode](https://marketplace.visualstudio.com/items?itemName=artdiniz.quitcontrol-vscode)
+
+</details>
+
+<details>
+
 <summary>Change configurations and copy files</summary>
 
 - [ ] System Preferences
