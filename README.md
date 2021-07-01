@@ -13,7 +13,7 @@ $ sudo apt --yes update
 $ sudo apt --yes install build-essential curl file git
 ```
 
-install [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) if macOS.
+install [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) and [MacPorts](https://www.macports.org/) if macOS.
 
 setup my environment:
 
