@@ -66,30 +66,32 @@ install-apt-packages: ## install apt packages for Ubuntu/Debian
 	-$(apt) install tmux
 
 .PHONY: install-ports
+install-ports: commands :=
+install-ports: commands += bash
+install-ports: commands += bash-completion
+install-ports: commands += bat
+#install-ports: commands += duf
+#install-ports: commands += exa
+install-ports: commands += fd
+install-ports: commands += fswatch
+install-ports: commands += fzf
+install-ports: commands += gh
+# install-ports: commands += ghq # NOTE: Not found
+install-ports: commands += git
+install-ports: commands += git-delta
+install-ports: commands += go
+install-ports: commands += go-mmv
+install-ports: commands += jq
+#install-ports: commands += mosh
+#install-ports: commands += procs
+#install-ports: commands += py-mitmproxy
+install-ports: commands += ripgrep
+install-ports: commands += tig
+install-ports: commands += tmux
 install-ports: port ?= sudo port -N
 install-ports: ## install ports for macOS
 	-$(port) selfupdate
-	-$(port) install bash
-	-$(port) install bash-completion
-	-$(port) install bat
-	#$(port) install duf
-	#$(port) install exa
-	-$(port) install fd
-	-$(port) install fswatch
-	-$(port) install fzf
-	-$(port) install gh
-	#$(port) install ghq # NOTE: Not found
-	-$(port) install git
-	-$(port) install git-delta
-	#$(port) install go
-	-$(port) install go-mmv
-	-$(port) install jq
-	#$(port) install mosh
-	#$(port) install procs
-	#$(port) install py-mitmproxy
-	-$(port) install ripgrep
-	-$(port) install tig
-	-$(port) install tmux
+	-printf -- 'install %s\n' $(commands) | $(port) -F -
 
 .PHONY: install-scripts
 install-scripts: root := $$HOME/.ghq/github.com
