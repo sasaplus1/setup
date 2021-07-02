@@ -66,7 +66,7 @@ install-apt-packages: ## install apt packages for Ubuntu/Debian
 	-$(apt) install tmux
 
 .PHONY: install-ports
-install-ports: port ?= sudo port
+install-ports: port ?= sudo port -N
 install-ports: ## install ports for macOS
 	-$(port) selfupdate
 	-$(port) install bash
