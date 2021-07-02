@@ -58,8 +58,8 @@ $ make setup
 
 <summary>Configure browser, import browser bookmarks and install browser extensions</summary>
 
-- [ ] Firefox Configurations
-- [ ] Chrome Configurations
+- [ ] Firefox configurations
+- [ ] Chrome configurations
 - [ ] Firefox bookmarks
 - [ ] Chrome bookmarks
 - Firefox addons
