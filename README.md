@@ -6,6 +6,8 @@ setup scripts and note for my environment
 
 ## How to setup
 
+### Ubuntu
+
 execute command the below if Ubuntu:
 
 ```console
@@ -13,7 +15,19 @@ $ sudo apt --yes update
 $ sudo apt --yes install build-essential curl file git
 ```
 
+### macOS
+
 install [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) and [MacPorts](https://www.macports.org/) if macOS.
+
+If you don't want to install Xcode:
+
+```console
+$ sudo rm -rf /Library/Developer/CommandLineTools
+$ sudo xcode-select --install
+$ sudo xcodebuild -license
+```
+
+### Setup
 
 setup my environment:
 
