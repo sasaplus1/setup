@@ -48,17 +48,13 @@ $ make setup
 
 <summary>Install applications for macOS</summary>
 
-- [ ] [Alfred](https://www.alfredapp.com/)
-- [ ] [Android SDK Platform-Tools](https://developer.android.com/studio/releases/platform-tools)
 - [ ] [Bitwarden](https://bitwarden.com/)
 - [ ] [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [ ] [Google Chrome](https://www.google.com/chrome/)
 - [ ] [Google Chrome Canary](https://www.google.com/chrome/canary/)
 - [ ] [Kap](https://getkap.co/)
-- [ ] [ngrok](https://ngrok.com/)
 - [ ] [Rectangle](https://rectangleapp.com/)
 - [ ] [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
-- [ ] [Sketch](https://www.sketch.com/)
 - [ ] [Skitch](https://evernote.com/products/skitch)
 - [ ] [Vagrant](https://www.vagrantup.com/)
 - [ ] [VirtualBox](https://www.virtualbox.org/)
