@@ -6,6 +6,8 @@ setup scripts and note for my environment
 
 ## How to setup
 
+### Ubuntu
+
 execute command the below if Ubuntu:
 
 ```console
@@ -13,7 +15,19 @@ $ sudo apt --yes update
 $ sudo apt --yes install build-essential curl file git
 ```
 
+### macOS
+
 install [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) and [MacPorts](https://www.macports.org/) if macOS.
+
+If you don't want to install Xcode:
+
+```console
+$ sudo rm -rf /Library/Developer/CommandLineTools
+$ sudo xcode-select --install
+$ sudo xcodebuild -license
+```
+
+### Setup
 
 setup my environment:
 
@@ -32,21 +46,28 @@ $ make setup
 
 <details>
 
+<summary>Create SSH key</summary>
+
+```console
+$ mkdir ~/.ssh
+$ chmod 0700 ~/.ssh
+$ cd ~/.ssh
+$ ssh-keygen -t ed25519 -C 'comment' -f [service]_id_ed25519
+```
+
+</details>
+
+<details>
+
 <summary>Install applications for macOS</summary>
 
-- [ ] [Alfred](https://www.alfredapp.com/)
-- [ ] [Android SDK Platform-Tools](https://developer.android.com/studio/releases/platform-tools)
 - [ ] [Bitwarden](https://bitwarden.com/)
 - [ ] [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [ ] [Firefox](https://www.mozilla.org/firefox/new/)
-- [ ] [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 - [ ] [Google Chrome](https://www.google.com/chrome/)
 - [ ] [Google Chrome Canary](https://www.google.com/chrome/canary/)
 - [ ] [Kap](https://getkap.co/)
-- [ ] [ngrok](https://ngrok.com/)
 - [ ] [Rectangle](https://rectangleapp.com/)
 - [ ] [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
-- [ ] [Sketch](https://www.sketch.com/)
 - [ ] [Skitch](https://evernote.com/products/skitch)
 - [ ] [Vagrant](https://www.vagrantup.com/)
 - [ ] [VirtualBox](https://www.virtualbox.org/)
@@ -58,18 +79,10 @@ $ make setup
 
 <summary>Configure browser, import browser bookmarks and install browser extensions</summary>
 
-- [ ] Firefox configurations
 - [ ] Chrome configurations
-- [ ] Firefox bookmarks
 - [ ] Chrome bookmarks
-- Firefox addons
-    - [ ] [Bitwarden](https://addons.mozilla.org/ja/firefox/addon/bitwarden-password-manager/)
-    - [ ] [Firefox Multi-Account Containers](https://addons.mozilla.org/ja/firefox/addon/multi-account-containers/)
-    - [ ] [Mouse Dictionry](https://addons.mozilla.org/ja/firefox/addon/mousedictionary/)
-    - [ ] [OctoLinker](https://addons.mozilla.org/ja/firefox/addon/octolinker/)
-    - [ ] [Simple Translate](https://addons.mozilla.org/ja/firefox/addon/simple-translate/)
-    - [ ] [Switch Container](https://addons.mozilla.org/ja/firefox/addon/switch-container/)
 - Chrome extensions
+    - [ ] [Bitwarden](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb)
     - [ ] [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna)
     - [ ] [ChromeLens](https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd)
     - [ ] [Google 翻訳](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
