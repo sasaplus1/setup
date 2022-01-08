@@ -46,6 +46,19 @@ $ make setup
 
 <details>
 
+<summary>Create SSH key</summary>
+
+```console
+$ mkdir ~/.ssh
+$ chmod 0700 ~/.ssh
+$ cd ~/.ssh
+$ ssh-keygen -t ed25519 -C 'comment' -f [service]_id_ed25519
+```
+
+</details>
+
+<details>
+
 <summary>Install applications for macOS</summary>
 
 - [ ] [Bitwarden](https://bitwarden.com/)
