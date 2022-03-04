@@ -64,6 +64,7 @@ install-apt-packages: ## install apt packages for Ubuntu/Debian
 	-$(apt) install ripgrep
 	-$(apt) install tig
 	-$(apt) install tmux
+	-$(apt) install vifm
 	-$(apt) install zoxide
 
 .PHONY: install-ports
@@ -89,6 +90,7 @@ install-ports: commands += jq
 install-ports: commands += ripgrep
 install-ports: commands += tig
 install-ports: commands += tmux
+install-ports: commands += vifm
 install-ports: commands += zoxide
 install-ports: port ?= sudo port -N
 install-ports: ## install ports for macOS
