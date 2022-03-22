@@ -19,7 +19,7 @@ $ sudo apt --yes install build-essential curl file git
 
 install [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) and [MacPorts](https://www.macports.org/) if macOS.
 
-If you don't want to install Xcode:
+If you don't want to install Xcode, install CommandLineTools instead:
 
 ```console
 $ sudo rm -rf /Library/Developer/CommandLineTools
@@ -46,6 +46,16 @@ $ make setup
 
 <details>
 
+<summary>Install browser and password manager extension</summary>
+
+</details>
+
+- [ ] [Firefox Developer Edition](https://www.mozilla.org/ja/firefox/developer/)
+- Firefox addons
+    - [ ] [Bitwarden](https://addons.mozilla.org/ja/firefox/addon/bitwarden-password-manager/)
+
+<details>
+
 <summary>Create SSH key</summary>
 
 ```console
@@ -53,6 +63,31 @@ $ mkdir ~/.ssh
 $ chmod 0700 ~/.ssh
 $ cd ~/.ssh
 $ ssh-keygen -t ed25519 -C 'comment' -f [service]_id_ed25519
+```
+
+</details>
+
+<details>
+
+<summary>Register public key to GitHub</summary>
+
+```console
+$ gh auth login
+$ gh ssh-key add -t '[email] / [hostname]' key.pub
+```
+
+</details>
+
+<details>
+
+<summary>Setup dotfiles</summary>
+
+```console
+$ mkdir -p ~/.ghq/github.com/sasaplus1
+$ cd $_
+$ git clone ssh://git@github.com/sasaplus1/dotfiles.git
+$ cd dotfiles
+$ less README.md
 ```
 
 </details>
@@ -138,6 +173,7 @@ $ ssh-keygen -t ed25519 -C 'comment' -f [service]_id_ed25519
 ## Related
 
 - [dotfiles](https://github.com/sasaplus1/dotfiles)
+- [download-gh.sh](https://github.com/sasaplus1/download-gh.sh)
 - [macos-bash](https://github.com/sasaplus1/macos-bash)
 - [macos-tmux](https://github.com/sasaplus1/macos-tmux)
 - [macos-vim](https://github.com/sasaplus1/macos-vim)
