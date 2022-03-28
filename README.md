@@ -33,6 +33,7 @@ setup my environment:
 
 ```console
 $ make setup
+$ make install-ports # or make install-apt-packages
 ```
 
 ## Setup without repository
@@ -40,6 +41,7 @@ $ make setup
 ```console
 $ curl -L https://git.io/sasaplus1-setup -o Makefile
 $ make setup
+$ make install-ports # or make install-apt-packages
 ```
 
 ## Tasks
@@ -73,10 +75,26 @@ $ ssh-keygen -t ed25519 -C 'comment' -f [service]_id_ed25519
 
 ```console
 $ gh auth login
+$ gh auth refresh -h github.com -s admin:public_key
 $ gh ssh-key add -t '[email] / [hostname]' key.pub
 ```
 
 if you can't use `gh` at this time, use [download-gh.sh](https://github.com/sasaplus1/download-gh.sh).
+
+</details>
+
+<details>
+
+<summary>Create .ssh/config</summary>
+
+```sshconfig
+Host github.com
+    Compression yes
+    HostName github.com
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/key
+    User git
+```
 
 </details>
 
