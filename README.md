@@ -143,6 +143,9 @@ $ # setup dotfiles
     - [ ] [Mouse Dictionry](https://addons.mozilla.org/ja/firefox/addon/mousedictionary/)
     - [ ] [OctoLinker](https://addons.mozilla.org/ja/firefox/addon/octolinker/)
     - [ ] [Simple Translate](https://addons.mozilla.org/ja/firefox/addon/simple-translate/)
+    - [ ] [uBlacklist](https://addons.mozilla.org/en-US/firefox/addon/ublacklist/)
+        - [ ] [ublacklist-github-translation](https://github.com/arosh/ublacklist-github-translation)
+        - [ ] [ublacklist-stackoverflow-translation](https://github.com/arosh/ublacklist-stackoverflow-translation)
 - [ ] Chrome configurations
 - [ ] Chrome bookmarks
 - Chrome extensions
@@ -157,6 +160,9 @@ $ # setup dotfiles
     - [ ] [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif)
     - [ ] [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
     - [ ] [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+    - [ ] [uBlacklist](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe)
+        - [ ] [ublacklist-github-translation](https://github.com/arosh/ublacklist-github-translation)
+        - [ ] [ublacklist-stackoverflow-translation](https://github.com/arosh/ublacklist-stackoverflow-translation)
     - [ ] [Web Vitals](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma)
 
 </details>
