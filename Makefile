@@ -114,6 +114,7 @@ clone-urxvt-extension: ## get urxvt extension
 
 .PHONY: set-defaults
 set-defaults: ## set defaults for macOS
+	defaults write com.apple.desktopservices DSDontWriteNetworkStores TRUE
 	defaults write com.apple.finder AppleShowAllFiles TRUE
 	defaults write com.apple.finder _FXShowPosixPathInTitle TRUE
 
