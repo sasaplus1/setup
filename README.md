@@ -143,7 +143,8 @@ $ # setup dotfiles
     - [ ] [Mouse Dictionry](https://addons.mozilla.org/ja/firefox/addon/mousedictionary/)
     - [ ] [OctoLinker](https://addons.mozilla.org/ja/firefox/addon/octolinker/)
     - [ ] [Simple Translate](https://addons.mozilla.org/ja/firefox/addon/simple-translate/)
-    - [ ] [uBlacklist](https://addons.mozilla.org/en-US/firefox/addon/ublacklist/)
+    - [ ] [Switch Container](https://addons.mozilla.org/ja/firefox/addon/switch-container/)
+    - [ ] [uBlacklist](https://addons.mozilla.org/ja/firefox/addon/ublacklist/)
         - [ ] [ublacklist-github-translation](https://github.com/arosh/ublacklist-github-translation)
         - [ ] [ublacklist-stackoverflow-translation](https://github.com/arosh/ublacklist-stackoverflow-translation)
 - [ ] Chrome configurations
