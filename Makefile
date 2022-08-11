@@ -72,6 +72,7 @@ install-ports: commands :=
 install-ports: commands += bash
 install-ports: commands += bash-completion
 install-ports: commands += bat
+install-ports: commands += direnv
 #install-ports: commands += duf
 #install-ports: commands += exa
 install-ports: commands += fd
@@ -90,7 +91,7 @@ install-ports: commands += jq
 install-ports: commands += ripgrep
 install-ports: commands += tig
 install-ports: commands += tmux
-install-ports: commands += vifm
+#install-ports: commands += vifm
 install-ports: commands += zoxide
 install-ports: port ?= sudo port -N
 install-ports: ## install ports for macOS
