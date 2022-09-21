@@ -22,7 +22,14 @@ jobs:
       - run: curl -LO https://raw.githubusercontent.com/GiovanniBussi/macports-ci/master/macports-ci
       - run: source ./macports-ci install
       - uses: actions/checkout@v2
+      - uses: actions/cache@v3
+        with:
+          path: ~/.macports-ci-ccache
+          key: ccache-macports-${{ github.sha }}
+          restore-keys: ccache-macports-
+      - run: source macports-ci ccache
       - run: make install-ports
+      - run: source macports-ci ccache --save
   ubuntu-apt:
     name: install APT packages
     if: github.event_name == 'push' || github.event_name == 'schedule' || github.event.pull_request.head.repo.full_name != github.repository
