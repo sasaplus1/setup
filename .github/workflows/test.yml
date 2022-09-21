@@ -27,9 +27,9 @@ jobs:
           path: ~/.macports-ci-ccache
           key: ccache-macports-${{ github.sha }}
           restore-keys: ccache-macports-
-      - run: source macports-ci ccache
+      - run: source ~/macports-ci ccache
       - run: make install-ports
-      - run: source macports-ci ccache --save
+      - run: source ~/macports-ci ccache --save
   ubuntu-apt:
     name: install APT packages
     if: github.event_name == 'push' || github.event_name == 'schedule' || github.event.pull_request.head.repo.full_name != github.repository
