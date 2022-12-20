@@ -148,6 +148,9 @@ $ # setup dotfiles
     - [ ] [uBlacklist](https://addons.mozilla.org/ja/firefox/addon/ublacklist/)
         - [ ] [ublacklist-github-translation](https://github.com/arosh/ublacklist-github-translation)
         - [ ] [ublacklist-stackoverflow-translation](https://github.com/arosh/ublacklist-stackoverflow-translation)
+        - [ ] [uBlacklist-wiki-copy-sites](https://github.com/HO-0520-IT/uBlacklist-wiki-copy-sites/)
+        - [ ] [ublacklist-programming-school](https://github.com/108EAA0A/ublacklist-programming-school)
+        - [ ] [ublacklist-company-game-wiki](https://github.com/108EAA0A/ublacklist-company-game-wiki)
 - [ ] Chrome configurations
 - [ ] Chrome bookmarks
 - Chrome extensions
