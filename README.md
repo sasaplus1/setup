@@ -54,6 +54,12 @@ $ make install-ports # or make install-apt-packages
 - Firefox addons
     - [ ] [Bitwarden](https://addons.mozilla.org/ja/firefox/addon/bitwarden-password-manager/)
 
+Download with curl:
+
+```console
+$ curl -fsSL 'https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=osx&lang=ja-JP-mac' -o firefox.dmg
+```
+
 </details>
 
 <details>
@@ -129,6 +135,12 @@ $ # setup dotfiles
 - [ ] [Vagrant](https://www.vagrantup.com/)
 - [ ] [VirtualBox](https://www.virtualbox.org/)
 - [ ] [Visual Studio Code](https://code.visualstudio.com/)
+
+Download Google Chrome with curl:
+
+```console
+$ curl -fsSL 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg' -o googlechrome.dmg
+```
 
 </details>
 
