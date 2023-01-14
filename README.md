@@ -24,7 +24,7 @@ If you don't want to install Xcode, install CommandLineTools instead:
 ```console
 $ sudo rm -rf /Library/Developer/CommandLineTools
 $ sudo xcode-select --install
-$ sudo xcodebuild -license
+$ sudo xcode-select --switch /Library/Developer/CommandLineTools
 ```
 
 ### Setup
