@@ -131,10 +131,12 @@ $ # setup dotfiles
 - [ ] [MeetingBar](https://meetingbar.onrender.com/)
 - [ ] [Rectangle](https://rectangleapp.com/)
 - [ ] [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
+- [ ] [Simplenote](https://simplenote.com/)
 - [ ] [Skitch](https://evernote.com/products/skitch)
 - [ ] [Vagrant](https://www.vagrantup.com/)
 - [ ] [VirtualBox](https://www.virtualbox.org/)
 - [ ] [Visual Studio Code](https://code.visualstudio.com/)
+- [ ] [WezTerm](https://wezfurlong.org/wezterm/)
 
 Download Google Chrome with curl:
 
