@@ -70,7 +70,7 @@ $ curl -fsSL 'https://download.mozilla.org/?product=firefox-devedition-latest-ss
 $ mkdir ~/.ssh
 $ chmod 0700 ~/.ssh
 $ cd ~/.ssh
-$ ssh-keygen -t ed25519 -C 'comment' -f [service]_id_ed25519
+$ ssh-keygen -t ed25519 -C '[email]' -f [service]_id_ed25519
 ```
 
 </details>
