@@ -138,12 +138,6 @@ $ # setup dotfiles
 - [ ] [Visual Studio Code](https://code.visualstudio.com/)
 - [ ] [WezTerm](https://wezfurlong.org/wezterm/)
 
-Download Google Chrome with curl:
-
-```console
-$ curl -fsSL 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg' -o googlechrome.dmg
-```
-
 </details>
 
 <details>
