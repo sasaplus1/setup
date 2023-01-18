@@ -134,6 +134,7 @@ $ # setup dotfiles
 - [ ] [Simplenote](https://simplenote.com/)
 - [ ] [Skitch](https://evernote.com/products/skitch)
 - [ ] [Vagrant](https://www.vagrantup.com/)
+- [ ] [Velja](https://sindresorhus.com/velja)
 - [ ] [VirtualBox](https://www.virtualbox.org/)
 - [ ] [Visual Studio Code](https://code.visualstudio.com/)
 - [ ] [WezTerm](https://wezfurlong.org/wezterm/)
