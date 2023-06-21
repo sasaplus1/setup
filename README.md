@@ -149,6 +149,7 @@ $ # setup dotfiles
 - [ ] Firefox bookmarks
 - Firefox extensions
     - [ ] [CopyTabTitleUrl](https://addons.mozilla.org/ja/firefox/addon/copytabtitleurl/)
+    - [ ] [Dark Reader](https://addons.mozilla.org/ja/firefox/addon/darkreader/)
     - [ ] [Firefox Multi-Account Containers](https://addons.mozilla.org/ja/firefox/addon/multi-account-containers/)
     - [ ] [Mouse Dictionry](https://addons.mozilla.org/ja/firefox/addon/mousedictionary/)
     - [ ] [OctoLinker](https://addons.mozilla.org/ja/firefox/addon/octolinker/)
@@ -165,6 +166,7 @@ $ # setup dotfiles
 - Chrome extensions
     - [ ] [Bitwarden](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb)
     - [ ] [CopyTabTitleUrl](https://chrome.google.com/webstore/detail/copytabtitleurl/lmgbdjfoaihhgdphombpgjpaohjfeapp)
+    - [ ] [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
     - [ ] [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna)
     - [ ] [ChromeLens](https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd)
     - [ ] [Google 翻訳](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
