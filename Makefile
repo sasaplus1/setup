@@ -89,6 +89,7 @@ install-ports: commands += jq
 #install-ports: commands += procs
 #install-ports: commands += py-mitmproxy
 install-ports: commands += ripgrep
+#install-ports: commands += universal-ctags
 install-ports: commands += tig
 install-ports: commands += tmux
 #install-ports: commands += vifm
