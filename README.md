@@ -161,6 +161,7 @@ $ # setup dotfiles
         - [ ] [uBlacklist-wiki-copy-sites](https://github.com/HO-0520-IT/uBlacklist-wiki-copy-sites/)
         - [ ] [ublacklist-programming-school](https://github.com/108EAA0A/ublacklist-programming-school)
         - [ ] [ublacklist-company-game-wiki](https://github.com/108EAA0A/ublacklist-company-game-wiki)
+    - [ ] [Wayback Machine](https://addons.mozilla.org/ja/firefox/addon/wayback-machine_new/)
 - [ ] Chrome configurations
 - [ ] Chrome bookmarks
 - Chrome extensions
@@ -183,6 +184,7 @@ $ # setup dotfiles
         - [ ] [uBlacklist-wiki-copy-sites](https://github.com/HO-0520-IT/uBlacklist-wiki-copy-sites/)
         - [ ] [ublacklist-programming-school](https://github.com/108EAA0A/ublacklist-programming-school)
         - [ ] [ublacklist-company-game-wiki](https://github.com/108EAA0A/ublacklist-company-game-wiki)
+    - [ ] [Wayback Machine](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak)
     - [ ] [Web Vitals](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma)
 
 </details>
