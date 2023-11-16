@@ -47,17 +47,23 @@ install-apt-packages: ## install apt packages for Ubuntu/Debian
 	-$(apt) install bash
 	-$(apt) install bash-completion
 	-$(apt) install bat
+	#$(apt) install bottom # NOTE: Not found
 	#$(apt) install duf # NOTE: Not found
-	#$(apt) install exa
+	#$(apt) install exa # NOTE: exa is rename to eza
 	-$(apt) install fd-find
 	-$(apt) install fzf
 	#$(apt) install gh # NOTE: Not found
+	#$(apt) install ghg # NOTE: Not found
 	#$(apt) install ghq # NOTE: Not found
 	-$(apt) install git
 	#$(apt) install git-delta # NOTE: Not found
 	#$(apt) install golang
 	#$(apt) install mmv # NOTE: Isn't itchyny/mmv
 	-$(apt) install jq
+	-$(apt) install lsd
+	#$(apt) install gitui # NOTE: Not found
+	#$(apt) install dust # NOTE: Not found
+	-$(apt) install gron
 	#$(apt) install mitmproxy
 	#$(apt) install mosh
 	#$(apt) install procs # NOTE: Not found
@@ -72,21 +78,27 @@ install-ports: commands :=
 install-ports: commands += bash
 install-ports: commands += bash-completion
 install-ports: commands += bat
+install-ports: commands += bottom
 install-ports: commands += direnv
-#install-ports: commands += duf
-#install-ports: commands += exa
+install-ports: commands += duf
+install-ports: commands += dust
+install-ports: commands += eza
 install-ports: commands += fd
 install-ports: commands += fswatch
 install-ports: commands += fzf
 install-ports: commands += gh
+# install-ports: commands += ghg # NOTE: Not found
 # install-ports: commands += ghq # NOTE: Not found
+install-ports: commands += gron
 install-ports: commands += git
+install-ports: commands += gitui
 install-ports: commands += git-delta
 install-ports: commands += go
 install-ports: commands += go-mmv
 install-ports: commands += jq
+install-ports: commands += lsd
 #install-ports: commands += mosh
-#install-ports: commands += procs
+install-ports: commands += procs
 #install-ports: commands += py-mitmproxy
 install-ports: commands += ripgrep
 #install-ports: commands += universal-ctags
