@@ -69,6 +69,7 @@ install-apt-packages: ## install apt packages for Ubuntu/Debian
 	#$(apt) install procs # NOTE: Not found
 	-$(apt) install ripgrep
 	-$(apt) install tig
+	-$(apt) install trash-cli
 	-$(apt) install tmux
 	-$(apt) install vifm
 	-$(apt) install zoxide
