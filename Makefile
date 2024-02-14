@@ -101,6 +101,7 @@ install-ports: commands += lsd
 install-ports: commands += procs
 #install-ports: commands += py-mitmproxy
 install-ports: commands += ripgrep
+install-ports: commands += rmtrash
 #install-ports: commands += universal-ctags
 install-ports: commands += tig
 install-ports: commands += tmux
