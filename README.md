@@ -64,6 +64,16 @@ $ curl -fsSL 'https://download.mozilla.org/?product=firefox-devedition-latest-ss
 
 <details>
 
+<summary>Change default shell</summary>
+
+```console
+$ chsh -s /bin/bash
+```
+
+</details>
+
+<details>
+
 <summary>Create SSH key</summary>
 
 ```console
