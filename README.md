@@ -209,6 +209,16 @@ $ # setup dotfiles
 
 <details>
 
+<summary>Install gh extensions</summary>
+
+- [ ] [gh-copilot](https://github.com/github/gh-copilot)
+- [ ] [gh-dash](https://github.com/dlvhdr/gh-dash)
+- [ ] [gh-poi](https://github.com/seachicken/gh-poi)
+
+</details>
+
+<details>
+
 <summary>Change configurations and copy files</summary>
 
 - [ ] System Preferences
