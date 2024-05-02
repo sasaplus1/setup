@@ -133,6 +133,7 @@ $ # setup dotfiles
 
 <summary>Install applications for macOS</summary>
 
+- [ ] [Arc](https://arc.net/)
 - [ ] [Bitwarden](https://bitwarden.com/)
 - [ ] [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [ ] [Google Chrome Canary](https://www.google.com/chrome/canary/)
@@ -155,6 +156,9 @@ $ # setup dotfiles
 
 <summary>Configure browser, import browser bookmarks and install browser extensions</summary>
 
+- [ ] Arc configurations
+- Arc extensions
+    - see Chrome extensions list
 - [ ] Firefox configurations
 - [ ] Firefox bookmarks
 - Firefox extensions
