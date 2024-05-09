@@ -99,6 +99,7 @@ install-ports: commands += go-mmv
 install-ports: commands += jq
 install-ports: commands += lsd
 #install-ports: commands += mosh
+install-ports: commands += neovim
 install-ports: commands += procs
 #install-ports: commands += py-mitmproxy
 install-ports: commands += ripgrep
