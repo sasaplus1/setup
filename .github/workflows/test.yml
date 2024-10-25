@@ -24,7 +24,7 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
       - run: nix-env --version
       - run: nix-env --help
-      - run: nix-env -e hello
+      - run: nix-env -i hello
       - run: hello
 
   macos-ports:
