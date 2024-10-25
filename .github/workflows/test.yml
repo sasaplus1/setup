@@ -25,6 +25,7 @@ jobs:
       - run: nix-env --version
       - run: nix-env --help
       - run: nix-env -e hello
+      - run: hello
 
   macos-ports:
     name: install MacPorts
