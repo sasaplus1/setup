@@ -8,6 +8,28 @@ on:
     - cron: '5 23 * * *'
 
 jobs:
+  nix:
+    if: github.event_name == 'push' || github.event_name == 'schedule' || github.event.pull_request.head.repo.full_name != github.repository
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - macos-14
+          - ubuntu-22.04
+          - ubuntu-24.04
+    runs-on: ${{ matrix.os }}
+    steps:
+      - if: startsWith(matrix.os, "macos-")
+        run: sh <(curl -fsSL https://nixos.org/nix/install)
+      - if: startsWith(matrix.os, "ubuntu-")
+        run: sh <(curl -fsSL https://nixos.org/nix/install) --daemon
+      - run: |
+          echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.bashrc
+          echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.profile
+      - run: nix-env --version
+      - run: nix-env --help
+      - run: nix-env -e hello
+
   macos-ports:
     name: install MacPorts
     if: github.event_name == 'push' || github.event_name == 'schedule' || github.event.pull_request.head.repo.full_name != github.repository
