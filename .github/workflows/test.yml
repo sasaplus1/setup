@@ -19,9 +19,9 @@ jobs:
           - ubuntu-24.04
     runs-on: ${{ matrix.os }}
     steps:
-      - if: startsWith(matrix.os, "macos-")
+      - if: ${{ startsWith(matrix.os, "macos-") }}
         run: sh <(curl -fsSL https://nixos.org/nix/install)
-      - if: startsWith(matrix.os, "ubuntu-")
+      - if: ${{ startsWith(matrix.os, "ubuntu-") }}
         run: sh <(curl -fsSL https://nixos.org/nix/install) --daemon
       - run: |
           echo '. ~/.nix-profile/etc/profile.d/nix.sh' >> ~/.bashrc
