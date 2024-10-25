@@ -34,6 +34,11 @@ setup-macos: ## setup macOS
 	$(MAKE) -f $(makefile) install-scripts
 	$(MAKE) -f $(makefile) set-defaults
 
+.PHONY: setup-tools
+setup-tools: ## setup some tools
+	-curl -fsSL https://direnv.net/install.sh | bash
+	-curl -fsSL https://moonrepo.dev/install/proto.sh | bash
+
 # }}}
 
 #-------------------------------------------------------------------------------
