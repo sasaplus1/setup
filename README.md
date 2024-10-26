@@ -15,6 +15,12 @@ $ sudo apt --yes update
 $ sudo apt --yes install build-essential curl file git
 ```
 
+[AppImage needs libfuse2](https://docs.appimage.org/user-guide/troubleshooting/fuse.html):
+
+```console
+$ sudo apt --yes install libfuse2
+```
+
 ### macOS
 
 install [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) and [MacPorts](https://www.macports.org/) if macOS.
