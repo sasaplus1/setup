@@ -80,6 +80,26 @@ $ chsh -s /bin/bash
 
 <details>
 
+<summary>Change directory names in home directory for Ubuntu</summary>
+
+```console
+$ LANG=C xdg-user-dirs-gtk-update --force
+```
+
+</details>
+
+<details>
+
+<summary>Change UI keybind to Emacs for GNOME on Ubuntu</summary>
+
+```console
+$ gsettings set org.gnome.desktop.interface gtk-key-theme Emacs
+```
+
+</details>
+
+<details>
+
 <summary>Create SSH key</summary>
 
 ```console
