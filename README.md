@@ -164,15 +164,11 @@ $ # setup dotfiles
 - [ ] [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [ ] [Google Chrome Canary](https://www.google.com/chrome/canary/)
 - [ ] [Google Chrome](https://www.google.com/chrome/)
-- [ ] [Kap](https://getkap.co/)
 - [ ] [MeetingBar](https://meetingbar.onrender.com/)
 - [ ] [Rectangle](https://rectangleapp.com/)
 - [ ] [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [ ] [Simplenote](https://simplenote.com/)
-- [ ] [Skitch](https://evernote.com/products/skitch)
-- [ ] [Vagrant](https://www.vagrantup.com/)
 - [ ] [Velja](https://sindresorhus.com/velja)
-- [ ] [VirtualBox](https://www.virtualbox.org/)
 - [ ] [Visual Studio Code](https://code.visualstudio.com/)
 - [ ] [WezTerm](https://wezfurlong.org/wezterm/)
 
@@ -188,44 +184,31 @@ $ # setup dotfiles
 - [ ] Firefox configurations
 - [ ] Firefox bookmarks
 - Firefox extensions
+    - [Bitwarden](https://addons.mozilla.org/ja/firefox/addon/bitwarden-password-manager/)
     - [ ] [CopyTabTitleUrl](https://addons.mozilla.org/ja/firefox/addon/copytabtitleurl/)
     - [ ] [Dark Reader](https://addons.mozilla.org/ja/firefox/addon/darkreader/)
-    - [ ] [Firefox Multi-Account Containers](https://addons.mozilla.org/ja/firefox/addon/multi-account-containers/)
     - [ ] [Mouse Dictionry](https://addons.mozilla.org/ja/firefox/addon/mousedictionary/)
-    - [ ] [OctoLinker](https://addons.mozilla.org/ja/firefox/addon/octolinker/)
     - [ ] [Simple Translate](https://addons.mozilla.org/ja/firefox/addon/simple-translate/)
-    - [ ] [Switch Container](https://addons.mozilla.org/ja/firefox/addon/switch-container/)
     - [ ] [uBlacklist](https://addons.mozilla.org/ja/firefox/addon/ublacklist/)
         - [ ] [ublacklist-github-translation](https://github.com/arosh/ublacklist-github-translation)
         - [ ] [ublacklist-stackoverflow-translation](https://github.com/arosh/ublacklist-stackoverflow-translation)
         - [ ] [uBlacklist-wiki-copy-sites](https://github.com/HO-0520-IT/uBlacklist-wiki-copy-sites/)
         - [ ] [ublacklist-programming-school](https://github.com/108EAA0A/ublacklist-programming-school)
         - [ ] [ublacklist-company-game-wiki](https://github.com/108EAA0A/ublacklist-company-game-wiki)
-    - [ ] [Wayback Machine](https://addons.mozilla.org/ja/firefox/addon/wayback-machine_new/)
 - [ ] Chrome configurations
 - [ ] Chrome bookmarks
 - Chrome extensions
     - [ ] [Bitwarden](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb)
     - [ ] [CopyTabTitleUrl](https://chrome.google.com/webstore/detail/copytabtitleurl/lmgbdjfoaihhgdphombpgjpaohjfeapp)
     - [ ] [Dark Reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh)
-    - [ ] [Google Analytics Debugger](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna)
-    - [ ] [ChromeLens](https://chrome.google.com/webstore/detail/chromelens/idikgljglpfilbhaboonnpnnincjhjkd)
-    - [ ] [Google 翻訳](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)
-    - [ ] [LTTM](https://chrome.google.com/webstore/detail/lttm/jdidcgkdggndpodjbipodfefnpgjooeh)
-    - [ ] [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj)
-    - [ ] [OctoLinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp)
-    - [ ] [Proxy Helper](https://chrome.google.com/webstore/detail/proxy-helper/mnloefcpaepkpmhaoipjkpikbnkmbnic)
-    - [ ] [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif)
-    - [ ] [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-    - [ ] [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+    - [ ] [Mouse Dictionry](https://chromewebstore.google.com/detail/mouse-dictionary/dnclbikcihnpjohihfcmmldgkjnebgnj)
+    - [ ] [Simple Translate](https://chromewebstore.google.com/detail/simple-translate/ibplnjkanclpjokhdolnendpplpjiace)
     - [ ] [uBlacklist](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe)
         - [ ] [ublacklist-github-translation](https://github.com/arosh/ublacklist-github-translation)
         - [ ] [ublacklist-stackoverflow-translation](https://github.com/arosh/ublacklist-stackoverflow-translation)
         - [ ] [uBlacklist-wiki-copy-sites](https://github.com/HO-0520-IT/uBlacklist-wiki-copy-sites/)
         - [ ] [ublacklist-programming-school](https://github.com/108EAA0A/ublacklist-programming-school)
         - [ ] [ublacklist-company-game-wiki](https://github.com/108EAA0A/ublacklist-company-game-wiki)
-    - [ ] [Wayback Machine](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak)
-    - [ ] [Web Vitals](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma)
 
 </details>
 
@@ -255,26 +238,6 @@ $ # setup dotfiles
 - [ ] Set `キーボード => ユーザ辞書`
 - [ ] Copy `~/.ssh/config`
 - [ ] Copy `$HOME` files
-
-</details>
-
-<details>
-
-<summary>Install PWA with Google Chrome</summary>
-
-- [Amazon Music](https://music.amazon.co.jp/)
-- [Slack](https://slack.com)
-- [SoundCloud](https://soundcloud.com/)
-- [YouTube Music](https://music.youtube.com/)
-
-</details>
-
-<details>
-
-<summary>Download virtual machines if needed</summary>
-
-- [Virtual Machines](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
-    - [(ja)](https://developer.microsoft.com/ja-jp/microsoft-edge/tools/vms/)
 
 </details>
 
