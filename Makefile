@@ -117,6 +117,7 @@ install-ports: commands += tig
 install-ports: commands += tmux
 #install-ports: commands += universal-ctags
 #install-ports: commands += vifm
+install-ports: commands += vim
 install-ports: commands += zoxide
 install-ports: port ?= sudo port -N
 install-ports: ## install ports for macOS
