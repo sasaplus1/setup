@@ -126,8 +126,8 @@ install-ports: ## install ports for macOS
 .PHONY: install-scripts
 install-scripts: root := $$HOME/.ghq/github.com
 install-scripts: ## install apps
-	-git clone https://github.com/simonwhitaker/gibo "$(root)/simonwhitaker/gibo"
-	-git clone https://github.com/shannonmoeller/up "$(root)/shannonmoeller/up"
+	-git clone https://github.com/simonwhitaker/gibo '$(root)/simonwhitaker/gibo'
+	-git clone https://github.com/shannonmoeller/up '$(root)/shannonmoeller/up'
 
 # }}}
 
