@@ -145,6 +145,8 @@ set-defaults: ## set defaults for macOS
 	defaults write com.apple.desktopservices DSDontWriteNetworkStores TRUE
 	defaults write com.apple.finder AppleShowAllFiles TRUE
 	defaults write com.apple.finder _FXShowPosixPathInTitle TRUE
+	defaults write -globalDomain AppleInterfaceStyle Dark
+	osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to 1'
 
 # }}}
 
