@@ -108,6 +108,7 @@ install-ports: commands += go-mmv
 install-ports: commands += gron
 install-ports: commands += jq
 #install-ports: commands += lsd
+install-ports: commands += mas
 #install-ports: commands += mosh
 install-ports: commands += neovim
 #install-ports: commands += procs
