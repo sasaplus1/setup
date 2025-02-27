@@ -7,19 +7,9 @@ makefile_dir := $(dir $(makefile))
 
 os := $(subst darwin,macos,$(shell uname -s | tr 'A-Z' 'a-z'))
 
-#-------------------------------------------------------------------------------
-
-# common {{{
-
 .PHONY: all
 all: ## output targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(makefile) | awk 'BEGIN { FS = ":.*?## " }; { printf "\033[36m%-30s\033[0m %s\n", $$1, $$2 }'
-
-# }}}
-
-#-------------------------------------------------------------------------------
-
-# setup {{{
 
 .PHONY: setup
 setup: setup-$(os) ## setup
@@ -38,12 +28,6 @@ setup-macos: ## setup macOS
 setup-tools: ## setup some tools
 	-curl -fsSL https://direnv.net/install.sh | bash
 	-curl -fsSL https://moonrepo.dev/install/proto.sh | bash
-
-# }}}
-
-#-------------------------------------------------------------------------------
-
-# installation targets {{{
 
 .PHONY: install-apt-packages
 install-apt-packages: apt ?= sudo apt-get --yes
@@ -136,12 +120,6 @@ install-scripts: ## install apps
 	-git clone https://github.com/simonwhitaker/gibo '$(root)/simonwhitaker/gibo'
 	-git clone https://github.com/shannonmoeller/up '$(root)/shannonmoeller/up'
 
-# }}}
-
-#-------------------------------------------------------------------------------
-
-# extra targets {{{
-
 .PHONY: clone-urxvt-extension
 clone-urxvt-extension: ## get urxvt extension
 	git clone https://github.com/muennich/urxvt-perls.git $$HOME/.urxvt/urxvt-perls
@@ -153,7 +131,5 @@ set-defaults: ## set defaults for macOS
 	defaults write com.apple.finder _FXShowPosixPathInTitle TRUE
 	defaults write -globalDomain AppleInterfaceStyle Dark
 	osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to 1'
-
-# }}}
 
 # vim:fdm=marker:
