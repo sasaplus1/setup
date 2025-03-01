@@ -214,14 +214,6 @@ $ # setup dotfiles
 
 <details>
 
-<summary>Install Visual Studio Code extensions</summary>
-
-- [ ] [Quit Control for VSCode](https://marketplace.visualstudio.com/items?itemName=artdiniz.quitcontrol-vscode)
-
-</details>
-
-<details>
-
 <summary>Install gh extensions</summary>
 
 - [ ] [gh-copilot](https://github.com/github/gh-copilot)
