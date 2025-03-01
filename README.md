@@ -162,14 +162,11 @@ $ # setup dotfiles
 - [ ] [Arc](https://arc.net/)
 - [ ] [Bitwarden](https://bitwarden.com/)
 - [ ] [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [ ] [Google Chrome Canary](https://www.google.com/chrome/canary/)
 - [ ] [Google Chrome](https://www.google.com/chrome/)
 - [ ] [MeetingBar](https://meetingbar.onrender.com/)
 - [ ] [Rectangle](https://rectangleapp.com/)
-- [ ] [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [ ] [Simplenote](https://simplenote.com/)
 - [ ] [Velja](https://sindresorhus.com/velja)
-- [ ] [Visual Studio Code](https://code.visualstudio.com/)
 - [ ] [WezTerm](https://wezfurlong.org/wezterm/)
 
 </details>
