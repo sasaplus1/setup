@@ -1,0 +1,34 @@
+install ast-grep
+install bash
+install bash-completion
+install bat
+install bitwarden-cli
+# install bottom
+install direnv
+# install duf
+# install dust
+# install eza
+install fd
+install fswatch
+install fzf
+install git-delta
+# install gitui
+install glow
+# install go
+install go-mmv
+install gron
+install jq
+# install lsd
+# install mosh
+install neovim
+# install procs
+# install py-mitmproxy
+install ripgrep
+install rsync
+install tig
+install tmux
+# install universal-ctags
+# install vifm
+install zoxide
+
+# vim:ft=sh:
