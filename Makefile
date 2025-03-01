@@ -67,53 +67,6 @@ install-apt-packages: ## install apt packages for Ubuntu/Debian
 	#$(apt) install vifm
 	-$(apt) install zoxide
 
-.PHONY: install-ports
-install-ports: commands :=
-install-ports: commands += ast-grep
-install-ports: commands += bash
-install-ports: commands += bash-completion
-install-ports: commands += bat
-install-ports: commands += bitwarden-cli
-#install-ports: commands += bottom
-install-ports: commands += curl
-#install-ports: commands += direnv
-#install-ports: commands += duf
-#install-ports: commands += dust
-#install-ports: commands += exa # NOTE: exa is rename to eza
-#install-ports: commands += eza
-install-ports: commands += fd
-install-ports: commands += fswatch
-install-ports: commands += fzf
-install-ports: commands += gh
-#install-ports: commands += ghg # NOTE: Not found
-install-ports: commands += ghq
-install-ports: commands += git
-install-ports: commands += git-delta
-#install-ports: commands += gitui
-install-ports: commands += glow
-#install-ports: commands += go # NOTE: via moonrepo/proto
-install-ports: commands += go-mmv
-install-ports: commands += gron
-install-ports: commands += jq
-#install-ports: commands += lsd
-install-ports: commands += mas
-#install-ports: commands += mosh
-install-ports: commands += neovim
-#install-ports: commands += procs
-#install-ports: commands += py-mitmproxy
-install-ports: commands += ripgrep
-install-ports: commands += rsync
-install-ports: commands += tig
-install-ports: commands += tmux
-#install-ports: commands += universal-ctags
-#install-ports: commands += vifm
-install-ports: commands += vim
-install-ports: commands += zoxide
-install-ports: port ?= sudo port -N
-install-ports: ## install ports for macOS
-	-$(port) selfupdate
-	-printf -- 'install %s\n' $(commands) | $(port) -F -
-
 .PHONY: install-scripts
 install-scripts: root := $$HOME/.ghq/github.com
 install-scripts: ## install apps
