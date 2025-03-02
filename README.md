@@ -39,15 +39,15 @@ setup my environment:
 
 ```console
 $ make setup
-$ make install-ports # or make install-apt-packages
 ```
 
 ## Setup without repository
 
 ```console
-$ curl -L https://git.io/sasaplus1-setup -o Makefile
+$ curl -L -o setup.zip https://github.com/sasaplus1/setup/archive/refs/heads/master.zip
+$ unzip setup.zip
+$ cd setup-master
 $ make setup
-$ make install-ports # or make install-apt-packages
 ```
 
 ## Tasks
@@ -74,26 +74,6 @@ $ curl -fsSL 'https://download.mozilla.org/?product=firefox-devedition-latest-ss
 
 ```console
 $ chsh -s /bin/bash
-```
-
-</details>
-
-<details>
-
-<summary>Change directory names in home directory for Ubuntu</summary>
-
-```console
-$ LANG=C xdg-user-dirs-gtk-update --force
-```
-
-</details>
-
-<details>
-
-<summary>Change UI keybind to Emacs for GNOME on Ubuntu</summary>
-
-```console
-$ gsettings set org.gnome.desktop.interface gtk-key-theme Emacs
 ```
 
 </details>
