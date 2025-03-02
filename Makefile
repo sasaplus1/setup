@@ -29,3 +29,4 @@ setup-linux: ## setup Linux
 	$(MAKE) setup -C gh
 	$(MAKE) setup -C ghq
 	$(MAKE) setup -C sh
+	$(MAKE) setup -C ubuntu
