@@ -2,6 +2,6 @@
 # 1295203466 # Microsoft Remote Desktop
 692867256  # Simplenote
 1607635845 # Velja
-497799835  # Xcode
+# 497799835  # Xcode
 
 # vim:ft=sh:

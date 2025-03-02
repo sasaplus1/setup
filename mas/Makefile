@@ -16,10 +16,10 @@ all: ## output targets
 .PHONY: setup
 setup: applications := $(root)/applications.txt
 setup: ## install applications
-	grep -v '^#' '$(applications)' | xargs $(mas) install
+	awk '{ !/^#/ { print $1 } }' '$(applications)' | xargs $(mas) install
 
 .PHONY: maintenance
 maintenance: applications := $(root)/applications.txt
 maintenance: ## maintenance applications
 	$(mas) list
-	grep -v '^#' '$(applications)' | xargs $(mas) upgrade
+	awk '{ !/^#/ { print $1 } }' '$(applications)' | xargs $(mas) upgrade
