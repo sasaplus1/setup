@@ -16,7 +16,7 @@ all: ## output targets
 .PHONY: setup
 setup: scripts := $(wildcard $(root)/*.sh)
 setup: ## install scripts
-	xargs -n 1 $(sh) < '$(scripts)'
+	find $(root) -name '*.sh' -print | xargs -n 1 $(sh)
 
 .PHONY: maintenance
 maintenance: setup ## maintenance scripts

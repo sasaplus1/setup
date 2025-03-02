@@ -16,7 +16,8 @@ setup: setup-$(os) ## setup
 
 .PHONY: setup-macos
 setup-macos: ## setup macOS
-	$(MAKE) setup -C macports
+	$(MAKE) install-bootstrap -C macports
+	$(MAKE) install-applications -C macports
 	$(MAKE) setup -C gh
 	$(MAKE) setup -C ghq
 	$(MAKE) setup -C sh
