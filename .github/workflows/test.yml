@@ -8,38 +8,7 @@ on:
     - cron: '5 23 * * *'
 
 jobs:
-  macos-ports:
-    name: install MacPorts
-    if: github.event_name == 'push' || github.event_name == 'schedule' || github.event.pull_request.head.repo.full_name != github.repository
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - macos-13
-          - macos-14
-          - macos-15
-    runs-on: ${{ matrix.os }}
-    steps:
-      - run: curl -LO https://raw.githubusercontent.com/GiovanniBussi/macports-ci/master/macports-ci
-      - run: source ./macports-ci install
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - run: make install-ports
-  ubuntu-apt:
-    name: install APT packages
-    if: github.event_name == 'push' || github.event_name == 'schedule' || github.event.pull_request.head.repo.full_name != github.repository
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu-22.04
-          - ubuntu-24.04
-    runs-on: ${{ matrix.os }}
-    env:
-      LANG: C
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - run: make install-apt-packages
-  on-macos:
+  macos:
     name: setup macOS
     if: github.event_name == 'push' || github.event_name == 'schedule' || github.event.pull_request.head.repo.full_name != github.repository
     strategy:
@@ -53,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - run: make setup
-  on-ubuntu:
+  ubuntu:
     name: setup Ubuntu
     if: github.event_name == 'push' || github.event_name == 'schedule' || github.event.pull_request.head.repo.full_name != github.repository
     strategy:
