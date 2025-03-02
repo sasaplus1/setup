@@ -17,7 +17,7 @@ all: ## output targets
 setup: applications := $(root)/applications.txt
 setup: ## install applications
 	$(apt) update
-	xargs -n 1 $(apt) install <(grep -v '^#' '$(applications)')
+	grep -v '^#' '$(applications)' | xargs $(apt) install
 
 .PHONY: maintenance
 maintenance: ## maintenance applications
