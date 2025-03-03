@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 url=
 bin="$HOME/.local/bin"
 
