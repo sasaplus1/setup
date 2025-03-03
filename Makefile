@@ -27,6 +27,7 @@ setup-macos: ## setup macOS
 setup-linux: ## setup Linux
 	$(MAKE) setup -C apt
 	$(MAKE) setup -C gh
-	$(MAKE) setup -C ghq
+	$(MAKE) install -C ghq
+	$(MAKE) setup -C ghq ghq=$$HOME/.local/bin/ghq
 	$(MAKE) setup -C sh
 	$(MAKE) setup -C ubuntu

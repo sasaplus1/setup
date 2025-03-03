@@ -20,3 +20,7 @@ setup: ## install repositories
 
 .PHONY: maintenance
 maintenance: setup ## maintenance repositories
+
+.PHONY: install
+install: ## [subtarget] install ghq for Linux
+	bash $(root)/install-ghq.sh
