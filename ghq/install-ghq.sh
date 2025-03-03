@@ -14,11 +14,10 @@ case "$(uname)" in
     ;;
 esac
 
-mkdir -p "$bin"
-
-[ -n "$url" ] && curl -fsSL --progress-bar --output-dir "$bin" -O "$url"
+[ -z "$url" ] && exit 0
 
 mkdir -p "$bin"
-unzip -j "$bin/ghq_linux_a??64.zip" '*/ghq' -d "$bin"
+curl -fsSL --progress-bar --output-dir "$bin" -O "$url"
+unzip -j "$bin"/ghq_linux_a??64.zip '*/ghq' -d "$bin"
 chmod +x "$bin/ghq"
-rm -f "$bin/ghq_linux_a??64.zip"
+rm -f "$bin"/ghq_linux_a??64.zip
