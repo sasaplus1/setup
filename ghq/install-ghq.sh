@@ -1,11 +1,12 @@
 #!/bin/bash
 
+set -euo pipefail
 set -x
 
 url=
 bin="$HOME/.local/bin"
 
-case "$(uname)" in
+case "$(uname -m)" in
   aarch64*|armv*)
     # TODO: renovate
     url='https://github.com/x-motemen/ghq/releases/download/v1.7.1/ghq_linux_arm64.zip'
