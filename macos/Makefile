@@ -20,3 +20,7 @@ setup: ## install scripts
 
 .PHONY: maintenance
 maintenance: setup ## maintenance scripts
+
+.PHONY: download-applications
+download-applications: ## [subtarget] download applications
+	find '$(root)' -name 'download-*.sh' -print | xargs -n 1 $(sh)
