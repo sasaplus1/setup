@@ -6,14 +6,16 @@ set -x
 url=
 bin="$HOME/.local/bin"
 
+# renovate: datasource=git-tags depName=x-motemen/ghq versioning=loose
+GHQ_VERSION=v1.7.1
+
 case "$(uname -m)" in
   aarch64*|armv*)
-    # TODO: renovate
-    url='https://github.com/x-motemen/ghq/releases/download/v1.7.1/ghq_linux_arm64.zip'
+    url="https://github.com/x-motemen/ghq/releases/download/${GHQ_VERSION}/ghq_linux_arm64.zip"
     ;;
   i*86|x86_64)
     # TODO: renovate
-    url='https://github.com/x-motemen/ghq/releases/download/v1.7.1/ghq_linux_amd64.zip'
+    url="https://github.com/x-motemen/ghq/releases/download/${GHQ_VERSION}/ghq_linux_amd64.zip"
     ;;
 esac
 
