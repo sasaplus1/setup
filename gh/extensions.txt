@@ -1,3 +1,4 @@
 github/gh-copilot
 dlvhdr/gh-dash
+dora1998/gh-glance
 seachicken/gh-poi
