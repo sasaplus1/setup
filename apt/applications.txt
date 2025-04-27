@@ -1,0 +1,29 @@
+bash
+bash-completion
+bat
+direnv
+# du-dust
+# eza
+fd-find
+fswatch
+fzf
+gh
+git
+# NOTE: >=24.10
+# git-delta
+gron
+# NOTE: for gsettings
+gsettings-desktop-schemas
+jq
+# lsd
+# mitmproxy
+# mosh
+neovim
+ripgrep
+tig
+tmux
+trash-cli
+# vifm
+zoxide
+
+# vim:ft=sh:

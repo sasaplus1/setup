@@ -1,0 +1,8 @@
+# bun 1
+# deno 2
+# go 1
+node 22
+# rust 1
+### zig
+
+# vim:ft=sh:

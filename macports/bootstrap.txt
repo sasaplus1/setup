@@ -1,0 +1,8 @@
+install curl
+install gh
+install ghq
+install git
+install mas
+install vim
+
+# vim:ft=sh:

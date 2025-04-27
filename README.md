@@ -39,22 +39,20 @@ setup my environment:
 
 ```console
 $ make setup
-$ make install-ports # or make install-apt-packages
 ```
 
 ## Setup without repository
 
 ```console
-$ curl -L https://git.io/sasaplus1-setup -o Makefile
+$ curl -L -o setup.zip https://github.com/sasaplus1/setup/archive/refs/heads/master.zip
+$ unzip setup.zip
+$ cd setup-master
 $ make setup
-$ make install-ports # or make install-apt-packages
 ```
 
 ## Tasks
 
-<details>
-
-<summary>Install browser and password manager extension</summary>
+<details><summary>Install browser and password manager extension</summary>
 
 - [ ] [Firefox Developer Edition](https://www.mozilla.org/ja/firefox/developer/)
 - Firefox addons
@@ -66,11 +64,11 @@ Download with curl:
 $ curl -fsSL 'https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=osx&lang=ja-JP-mac' -o firefox.dmg
 ```
 
+https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=ja-JP-mac
+
 </details>
 
-<details>
-
-<summary>Change default shell</summary>
+<details><summary>Change default shell</summary>
 
 ```console
 $ chsh -s /bin/bash
@@ -78,29 +76,7 @@ $ chsh -s /bin/bash
 
 </details>
 
-<details>
-
-<summary>Change directory names in home directory for Ubuntu</summary>
-
-```console
-$ LANG=C xdg-user-dirs-gtk-update --force
-```
-
-</details>
-
-<details>
-
-<summary>Change UI keybind to Emacs for GNOME on Ubuntu</summary>
-
-```console
-$ gsettings set org.gnome.desktop.interface gtk-key-theme Emacs
-```
-
-</details>
-
-<details>
-
-<summary>Create SSH key</summary>
+<details><summary>Create SSH key</summary>
 
 ```console
 $ mkdir ~/.ssh
@@ -111,9 +87,7 @@ $ ssh-keygen -t ed25519 -C '[email]' -f [service]_id_ed25519
 
 </details>
 
-<details>
-
-<summary>Register public key to GitHub</summary>
+<details><summary>Register public key to GitHub</summary>
 
 ```console
 $ gh auth login
@@ -125,9 +99,7 @@ if you can't use `gh` at this time, use [download-gh.sh](https://github.com/sasa
 
 </details>
 
-<details>
-
-<summary>Create .ssh/config</summary>
+<details><summary>Create .ssh/config</summary>
 
 ```sshconfig
 Host github.com
@@ -140,9 +112,7 @@ Host github.com
 
 </details>
 
-<details>
-
-<summary>Setup dotfiles</summary>
+<details><summary>Setup dotfiles</summary>
 
 ```console
 $ mkdir -p ~/.ghq/github.com/sasaplus1
@@ -155,25 +125,7 @@ $ # setup dotfiles
 
 </details>
 
-<details>
-
-<summary>Install applications for macOS</summary>
-
-- [ ] [Arc](https://arc.net/)
-- [ ] [Bitwarden](https://bitwarden.com/)
-- [ ] [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [ ] [Google Chrome](https://www.google.com/chrome/)
-- [ ] [MeetingBar](https://meetingbar.onrender.com/)
-- [ ] [Rectangle](https://rectangleapp.com/)
-- [ ] [Simplenote](https://simplenote.com/)
-- [ ] [Velja](https://sindresorhus.com/velja)
-- [ ] [WezTerm](https://wezfurlong.org/wezterm/)
-
-</details>
-
-<details>
-
-<summary>Configure browser, import browser bookmarks and install browser extensions</summary>
+<details><summary>Configure browser, import browser bookmarks and install browser extensions</summary>
 
 - [ ] Arc configurations
 - Arc extensions
@@ -209,19 +161,7 @@ $ # setup dotfiles
 
 </details>
 
-<details>
-
-<summary>Install gh extensions</summary>
-
-- [ ] [gh-copilot](https://github.com/github/gh-copilot)
-- [ ] [gh-dash](https://github.com/dlvhdr/gh-dash)
-- [ ] [gh-poi](https://github.com/seachicken/gh-poi)
-
-</details>
-
-<details>
-
-<summary>Change configurations and copy files</summary>
+<details><summary>Change configurations and copy files</summary>
 
 - [ ] System Preferences
 - [ ] Set `キーボード => ユーザ辞書`
