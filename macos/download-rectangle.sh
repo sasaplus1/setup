@@ -1,4 +1,8 @@
 #!/bin/bash
 
-# TODO: renovate
-curl -fsSL --progress-bar --output-dir "$HOME/Desktop" -O 'https://github.com/rxhanson/Rectangle/releases/download/v0.86/Rectangle0.86.dmg'
+# renovate: datasource=github-tags depName=rxhanson/Rectangle versioning=loose
+RECTANGLE_VERSION=v0.86
+
+ARCHIVE=Rectangle${RECTANGLE_VERSION#v}.dmg
+
+curl -fsSL --progress-bar --output-dir "$HOME/Desktop" -O "https://github.com/rxhanson/Rectangle/releases/download/${RECTANGLE_VERSION}/${ARCHIVE}"
