@@ -14,7 +14,6 @@ case "$(uname -m)" in
     url="https://github.com/x-motemen/ghq/releases/download/${GHQ_VERSION}/ghq_linux_arm64.zip"
     ;;
   i*86|x86_64)
-    # TODO: renovate
     url="https://github.com/x-motemen/ghq/releases/download/${GHQ_VERSION}/ghq_linux_amd64.zip"
     ;;
 esac
