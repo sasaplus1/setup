@@ -6,7 +6,7 @@ set -x
 url=
 bin="$HOME/.local/bin"
 
-# renovate: datasource=git-tags depName=x-motemen/ghq versioning=loose
+# renovate: datasource=github-tags depName=x-motemen/ghq versioning=loose
 GHQ_VERSION=v1.7.1
 
 case "$(uname -m)" in
