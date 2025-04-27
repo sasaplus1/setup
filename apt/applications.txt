@@ -9,9 +9,11 @@ fswatch
 fzf
 gh
 git
-# git-delta # NOTE: >=24.10
+# NOTE: >=24.10
+# git-delta
 gron
-gsettings-desktop-schemas # NOTE: for gsettings
+# NOTE: for gsettings
+gsettings-desktop-schemas
 jq
 # lsd
 # mitmproxy
