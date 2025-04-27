@@ -9,7 +9,7 @@ fswatch
 fzf
 gh
 git
-git-delta
+# git-delta # NOTE: >=24.10
 gron
 jq
 # lsd
