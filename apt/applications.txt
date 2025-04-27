@@ -11,6 +11,7 @@ gh
 git
 # git-delta # NOTE: >=24.10
 gron
+gsettings-desktop-schemas # NOTE: for gsettings
 jq
 # lsd
 # mitmproxy
