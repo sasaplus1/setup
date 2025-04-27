@@ -7,7 +7,7 @@ url=
 bin="$HOME/.local/bin"
 
 # renovate: datasource=github-tags depName=x-motemen/ghq versioning=loose
-GHQ_VERSION=v1.7.1
+GHQ_VERSION=v1.8.0
 
 case "$(uname -m)" in
   aarch64*|armv*)
