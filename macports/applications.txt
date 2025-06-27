@@ -11,12 +11,14 @@ install direnv
 install fd
 install fswatch
 install fzf
+install git-crypt
 install git-delta
 # install gitui
 install glow
 # install go
 install go-mmv
 install gron
+install gnupg2
 install jq
 # install lsd
 # install mosh
