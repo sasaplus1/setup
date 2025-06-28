@@ -23,6 +23,7 @@ install jq
 # install lsd
 # install mosh
 install neovim
+install pinact
 # install procs
 # install py-mitmproxy
 install ripgrep
