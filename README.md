@@ -1,8 +1,6 @@
 # setup
 
-[![test](https://github.com/sasaplus1/setup/workflows/test/badge.svg)](https://github.com/sasaplus1/setup/actions?query=workflow%3Atest)
-
-setup scripts and note for my environment
+setup scripts and notes for my environment
 
 ## How to setup
 
