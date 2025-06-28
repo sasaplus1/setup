@@ -161,15 +161,6 @@ $ # setup dotfiles
 
 </details>
 
-<details><summary>Change configurations and copy files</summary>
-
-- [ ] System Preferences
-- [ ] Set `キーボード => ユーザ辞書`
-- [ ] Copy `~/.ssh/config`
-- [ ] Copy `$HOME` files
-
-</details>
-
 ## Related
 
 - [dotfiles](https://github.com/sasaplus1/dotfiles)
