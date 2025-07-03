@@ -4,11 +4,52 @@ setup scripts and notes for my environment
 
 ## How to setup
 
+### macOS
+
+#### Setup system preferences
+
+Setting system preferences manually :(
+
+#### Change default shell
+
+```sh
+$ chsh -s /bin/bash
+```
+
+#### Setup Xcode
+
+install [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) via AppStore.
+
+if you don't want to install Xcode, install CommandLineTools instead:
+
+```sh
+$ sudo rm -rf /Library/Developer/CommandLineTools
+$ sudo xcode-select --install
+$ sudo xcode-select --switch /Library/Developer/CommandLineTools
+```
+
+accept license via CLI:
+
+```sh
+$ sudo xcodebuild -license accept
+```
+
+```sh
+$ gh auth login --skip-ssh-key
+```
+
+```sh
+$ export GH_ROOT="$HOME/.ghq"
+$ ghq get -p sasaplus1/{dotfiles,setup}
+```
+
+<!--
+
 ### Ubuntu
 
 execute command the below if Ubuntu:
 
-```console
+```sh
 $ sudo apt --yes update
 $ sudo apt --yes install build-essential curl file git
 ```
@@ -19,32 +60,15 @@ $ sudo apt --yes install build-essential curl file git
 $ sudo apt --yes install libfuse2
 ```
 
-### macOS
+-->
 
-install [Xcode](https://apps.apple.com/jp/app/xcode/id497799835) and [MacPorts](https://www.macports.org/) if macOS.
-
-If you don't want to install Xcode, install CommandLineTools instead:
-
-```console
-$ sudo rm -rf /Library/Developer/CommandLineTools
-$ sudo xcode-select --install
-$ sudo xcode-select --switch /Library/Developer/CommandLineTools
-```
+### Bootstrap
 
 ### Setup
 
 setup my environment:
 
 ```console
-$ make setup
-```
-
-## Setup without repository
-
-```console
-$ curl -L -o setup.zip https://github.com/sasaplus1/setup/archive/refs/heads/master.zip
-$ unzip setup.zip
-$ cd setup-master
 $ make setup
 ```
 
@@ -63,63 +87,6 @@ $ curl -fsSL 'https://download.mozilla.org/?product=firefox-devedition-latest-ss
 ```
 
 https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=ja-JP-mac
-
-</details>
-
-<details><summary>Change default shell</summary>
-
-```console
-$ chsh -s /bin/bash
-```
-
-</details>
-
-<details><summary>Create SSH key</summary>
-
-```console
-$ mkdir ~/.ssh
-$ chmod 0700 ~/.ssh
-$ cd ~/.ssh
-$ ssh-keygen -t ed25519 -C '[email]' -f [service]_id_ed25519
-```
-
-</details>
-
-<details><summary>Register public key to GitHub</summary>
-
-```console
-$ gh auth login
-$ gh auth refresh -h github.com -s admin:public_key
-$ gh ssh-key add -t '[email] / [hostname]' key.pub
-```
-
-if you can't use `gh` at this time, use [download-gh.sh](https://github.com/sasaplus1/download-gh.sh).
-
-</details>
-
-<details><summary>Create .ssh/config</summary>
-
-```sshconfig
-Host github.com
-    Compression yes
-    HostName github.com
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/key
-    User git
-```
-
-</details>
-
-<details><summary>Setup dotfiles</summary>
-
-```console
-$ mkdir -p ~/.ghq/github.com/sasaplus1
-$ cd $_
-$ git clone ssh://git@github.com/sasaplus1/dotfiles.git
-$ cd dotfiles
-$ less README.md
-$ # setup dotfiles
-```
 
 </details>
 
