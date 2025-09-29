@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # renovate: datasource=github-tags depName=rxhanson/Rectangle versioning=loose
-RECTANGLE_VERSION=v0.90
+RECTANGLE_VERSION=v0.91
 
 ARCHIVE=Rectangle${RECTANGLE_VERSION#v}.dmg
 
