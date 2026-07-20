@@ -24,7 +24,7 @@ jobs:
     steps:
       - run: curl -LO https://raw.githubusercontent.com/GiovanniBussi/macports-ci/master/macports-ci
       - run: source ./macports-ci install
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
       - run: make setup
         env:
           GH_TOKEN: ${{ github.token }}
@@ -44,7 +44,7 @@ jobs:
     env:
       LANG: C
     steps:
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
       - run: make setup
         env:
           GH_TOKEN: ${{ github.token }}
